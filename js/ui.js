@@ -616,8 +616,12 @@ _SECRETMALL_.pages = {
 					mainTabOffset = mainTabContent.offset().top;
 				}
 
-				$(window).on("load resize scroll", function() {
-					updateMainTabPosition();
+				$(window).on("load resize", function () {
+                    updateMainTabPosition();
+                    lineBannerPosition();
+                });
+
+				$(window).on("load scroll", function() {
 					lineBannerPosition();
 				});
 
