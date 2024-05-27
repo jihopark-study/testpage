@@ -551,40 +551,33 @@ _SECRETMALL_.pages = {
 			}
 		},
 		// 240527 요금리스트 라인배너 스크롤이벤트
-		lineBannerScrollEvt:function(){
-			
+		lineBannerScrollEvt: function() {
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
+			let mainTabHeight = mainTabContent.outerHeight();
 
-			if(lineBanner.hasClass('--active')){
+			if (lineBanner.hasClass('--active')) {
+				let lineBannerPosition = null;
 
-				$(window).on("load scroll resize", function () {
-					lineBannerPosition();
+				$(window).on("load scroll resize", function() {
+				const windowScrollTop = $(window).scrollTop();
+				const mainTabOffset = mainTabContent.offset().top;
+
+				if (windowScrollTop >= mainTabOffset) {
+					if ($(window).width() <= 980) {
+					const searchHeight = $(".filter_inner .search_type01").height();
+					lineBannerPosition = mainTabHeight + searchHeight - 10;
+					} else {
+					lineBannerPosition = mainTabHeight + 10;
+					}
+				} else {
+					lineBannerPosition = 110;
+				}
+
+				if (lineBannerPosition !== null) {
+					lineBanner.css("top", lineBannerPosition);
+				}
 				});
-
-				function lineBannerPosition (){
-
-					let windowScrollTop = $(window).scrollTop();
-                    let mainTabHeight = mainTabContent.outerHeight();
-					let mainTabOffset = mainTabContent.offset().top;
-					
-					if ( windowScrollTop >= mainTabOffset) {
-
-						if ($(window).width() <= 980) {
-
-							const searchHeight = $(".filter_inner .search_type01").height();
-
-						}
-						else {
-							$(lineBanner).stop().css("top", mainTabHeight + 10);
-						}
-
-					}
-					if(windowScrollTop < mainTabOffset) {
-						
-						$(lineBanner).stop().css('top', '110px');
-					}
-				};
 			}
 		}
 	},
