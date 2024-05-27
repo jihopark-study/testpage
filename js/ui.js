@@ -555,7 +555,6 @@ _SECRETMALL_.pages = {
 			
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
-			const searchFilter = $(".filter_inner .search_type01");
 
 			if(lineBanner.hasClass('--active')){
 
@@ -565,14 +564,11 @@ _SECRETMALL_.pages = {
 					let BannerPosition;
 
 					if ($(window).width() <= 980) {
-
-                        let searchHeight = searchFilter.height();
+                        let searchHeight = $(".filter_inner .search_type01").height();
 						BannerPosition = mainTabHeight + searchHeight - 10;
-
+                        
                     } else {
-
 						BannerPosition = mainTabHeight;
-						
                     }
 
 					$(window).on("scroll", function () {
