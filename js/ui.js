@@ -555,6 +555,8 @@ _SECRETMALL_.pages = {
 			
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
+                    	let mainTabHeight = mainTabContent.outerHeight();
+			
 
 			if(lineBanner.hasClass('--active')){
 
@@ -565,7 +567,6 @@ _SECRETMALL_.pages = {
 				function lineBannerPosition (){
 
 					let windowScrollTop = $(window).scrollTop();
-                    let mainTabHeight = mainTabContent.outerHeight();
 					let mainTabOffset = mainTabContent.offset().top;
 					
 					if ( windowScrollTop >= mainTabOffset) {
