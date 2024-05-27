@@ -611,8 +611,12 @@ _SECRETMALL_.pages = {
 
                         if (windowScrollTop >= mainTabOffset) {
                             lineBannerTop = BannerPosition;
+											return false;
+
                         } else {
                             lineBannerTop = 110;
+											return false;
+
                         }
 
                         lineBanner.css("top", lineBannerTop);
