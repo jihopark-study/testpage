@@ -613,15 +613,15 @@ _SECRETMALL_.pages = {
 
                             $(lineBanner)
                                 .stop()
-                                .css("margin-top", -5);
+                                .css("inset", '105px');
                         } else {
                             $(lineBanner)
                                 .stop()
-                                .css("margin-top", -70);
+                                .css("inset", '105px');
                         }
                     }
                     if (windowScrollTop < mainTabOffset) {
-                        $(lineBanner).stop().css("margin-top", "0px");
+                        $(lineBanner).stop().css("inset", "revert-layer");
                     }
                 }
             }
