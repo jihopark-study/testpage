@@ -593,10 +593,9 @@ _SECRETMALL_.pages = {
 
             if (lineBanner.hasClass("--active")) {
 
-				$(window).on("load resize", function () {
-					$();
-                });
-
+		$(window).on("load resize", function () {
+                    let mainTabOffset = mainTabContent.offset().top;
+		});
 
                 $(window).on("load scroll resize", function () {
                     lineBannerPosition();
@@ -605,7 +604,6 @@ _SECRETMALL_.pages = {
                 function lineBannerPosition() {
                     let windowScrollTop = $(window).scrollTop();
                     let mainTabHeight = mainTabContent.outerHeight();
-                    let mainTabOffset = mainTabContent.offset().top;
 
                     if (windowScrollTop >= mainTabOffset) {
                         if ($(window).width() <= 980) {
