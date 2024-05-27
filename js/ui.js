@@ -551,33 +551,55 @@ _SECRETMALL_.pages = {
 			}
 		},
 		// 240527 요금리스트 라인배너 스크롤이벤트
-		lineBannerScrollEvt: function() {
+		lineBannerScrollEvt:function(){
+			
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
-			let mainTabHeight = mainTabContent.outerHeight();
 
-			if (lineBanner.hasClass('--active')) {
-				let lineBannerPosition = null;
+			if(lineBanner.hasClass('--active')){
 
-				$(window).on("load scroll resize", function() {
-				const windowScrollTop = $(window).scrollTop();
-				const mainTabOffset = mainTabContent.offset().top;
-
-				if (windowScrollTop >= mainTabOffset) {
-					if ($(window).width() <= 980) {
-					const searchHeight = $(".filter_inner .search_type01").height();
-					lineBannerPosition = mainTabHeight + searchHeight - 10;
-					} else {
-					lineBannerPosition = mainTabHeight + 10;
-					}
-				} else {
-					lineBannerPosition = 110;
-				}
-
-				if (lineBannerPosition !== null) {
-					lineBanner.css("top", lineBannerPosition);
-				}
+				$(window).on("scroll", function () {
+					lineBannerPosition();
 				});
+
+				$(window).on("load resize", function () {
+                    let mainTabHeight = mainTabContent.outerHeight();
+
+					if ($(window).width() <= 980) {
+                        const searchHeight = $(".filter_inner .search_type01").height();
+
+						// const pcBannerPosition = mainTabHeight + searchHeight - 10;
+						const pcBannerPosition = mainTabHeight + searchHeight - 10;
+						$('.popo').css('top',pcBannerPosition);
+                        
+                    } else {
+						const mobileBannerPosition = mainTabHeight - 10;
+                    }
+
+				});
+
+				function lineBannerPosition (){
+
+					let windowScrollTop = $(window).scrollTop();
+					let mainTabOffset = mainTabContent.offset().top;
+					
+					if ( windowScrollTop >= mainTabOffset) {
+
+						if ($(window).width() <= 980) {
+
+
+							$(lineBanner).addClass('popo');
+						}
+						else {
+							$(lineBanner).stop().css("top", mainTabHeight + 10);
+						}
+
+					}
+					if(windowScrollTop < mainTabOffset) {
+						
+						$(lineBanner).stop().css('top', '110px');
+					}
+				};
 			}
 		}
 	},
