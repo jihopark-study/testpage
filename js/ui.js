@@ -558,50 +558,53 @@ _SECRETMALL_.pages = {
 
 			if(lineBanner.hasClass('--active')){
 
-				$(window).on("scroll", function () {
-					lineBannerPosition();
-				});
-
+				
 				$(window).on("load resize", function () {
                     let mainTabHeight = mainTabContent.outerHeight();
 
-					if ($(window).width() <= 980) {
-                        const searchHeight = $(".filter_inner .search_type01").height();
+					let BannerPosition = mainTabHeight - 10;
 
-						// const pcBannerPosition = mainTabHeight + searchHeight - 10;
-						const pcBannerPosition = mainTabHeight + searchHeight - 10;
-						$('.popo').css('top',pcBannerPosition);
+
+					if ($(window).width() <= 980) {
+                        let searchHeight = $(".filter_inner .search_type01").height();
+
+						BannerPosition = BannerPosition + searchHeight;
                         
                     } else {
-						const mobileBannerPosition = mainTabHeight - 10;
+						BannerPosition;
                     }
 
+					$(window).on("scroll", function () {
+						lineBannerPosition();
+					});
+	
+					function lineBannerPosition (){
+	
+						let windowScrollTop = $(window).scrollTop();
+						let mainTabOffset = mainTabContent.offset().top;
+						
+						if ( windowScrollTop >= mainTabOffset) {
+	
+							// if ($(window).width() <= 980) {
+	
+							// 	$(lineBanner).addClass('popo');
+							// }
+							// else {
+	
+							// }
+							lineBanner.css("top", BannerPosition);
+	
+						}
+						if(windowScrollTop < mainTabOffset) {
+							
+							$(lineBanner).stop().css('top', '110px');
+						}
+					};
 				});
 
-				function lineBannerPosition (){
-
-					let windowScrollTop = $(window).scrollTop();
-					let mainTabOffset = mainTabContent.offset().top;
-					
-					if ( windowScrollTop >= mainTabOffset) {
-
-						if ($(window).width() <= 980) {
-
-
-							$(lineBanner).addClass('popo');
-						}
-						else {
-							$(lineBanner).stop().css("top", mainTabHeight + 10);
-						}
-
-					}
-					if(windowScrollTop < mainTabOffset) {
-						
-						$(lineBanner).stop().css('top', '110px');
-					}
-				};
 			}
 		}
+
 	},
 	payment: {
 		init: function(){
