@@ -561,7 +561,8 @@ _SECRETMALL_.pages = {
 			let mainTapPCCal = mainTabHeight - 10;
 			let mainTapMobilePositon = Math.ceil(mainTapMobileCal);
 			let mainTapPCpositon = Math.ceil(mainTapPCCal);
-			
+			let mainTabOffset = mainTabContent.offset().top;
+		
 			console.log(mainTapMobilePositon);
 
 			if(lineBanner.hasClass('--active')){
@@ -573,7 +574,6 @@ _SECRETMALL_.pages = {
 				function lineBannerPosition (){
 
 					let windowScrollTop = $(window).scrollTop();
-					let mainTabOffset = mainTabContent.offset().top;
 					
 					if ( windowScrollTop >= mainTabOffset) {
 
