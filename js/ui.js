@@ -557,9 +557,12 @@ _SECRETMALL_.pages = {
 			const mainTabContent = $(".mainTab_content");
 			let mainTabHeight = mainTabContent.outerHeight();
 			let searchHeight = $(".filter_inner .search_type01").height();
-			let mainTapMobilePositon = mainTabHeight + searchHeight - 10;
-			let mainTapPCpositon = mainTabHeight - 10;
-
+			let mainTapMobileCal = mainTabHeight + searchHeight - 10;
+			let mainTapPCCal = mainTabHeight - 10;
+			let mainTapMobilePositon = Math.ceil(mainTapMobileCal);
+			let mainTapPCpositon = Math.ceil(mainTapPCCal);
+			
+			console.log(mainTapMobilePositon);
 
 			if(lineBanner.hasClass('--active')){
 
