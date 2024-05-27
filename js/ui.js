@@ -552,144 +552,80 @@ _SECRETMALL_.pages = {
             }
         },
         // 240527 요금리스트 라인배너 스크롤이벤트
-        // lineBannerScrollEvt:function(){
-			
-		// 	const lineBanner = $(".line-banner-container");
-			
-		// 	if(lineBanner.hasClass('--active')){
-				
-		// 		const mainTabContent = $(".mainTab_content");
-		// 		let mainTabHeight = mainTabContent.outerHeight();
-		// 		let mainTabOffset = mainTabContent.offset().top;
 
-		// 		if ($(window).width() <= 980) {
-        //             mainTabHeight = mainTabContent.outerHeight();
-        //             mainTabOffset = mainTabContent.offset().top;
+        // lineBannerScrollEvt: function () {
+        //     const lineBanner = $(".line-banner-container");
+        //     const mainTabContent = $(".mainTab_content");
+
+        //     if (lineBanner.hasClass("--active")) {
+        //         $(window).on("load scroll resize", function () {
+        //             lineBannerPosition();
+        //         });
+
+        //         function lineBannerPosition() {
+        //             let windowScrollTop = $(window).scrollTop();
+        //             let mainTabHeight = mainTabContent.outerHeight();
+        //             let mainTabOffset = mainTabContent.offset().top;
+
+        //             if (windowScrollTop >= mainTabOffset) {
+        //                 if ($(window).width() <= 980) {
+        //                     const searchHeight = $(".filter_inner .search_type01").height();
+
+        //                     $(lineBanner)
+        //                         .stop()
+        //                         .css("top", mainTabHeight + searchHeight - 10);
+        //                 } else {
+        //                     $(lineBanner)
+        //                         .stop()
+        //                         .css("top", mainTabHeight + 10);
+        //                 }
+        //             }
+        //             if (windowScrollTop < mainTabOffset) {
+        //                 $(lineBanner).stop().css("top", "110px");
+        //             }
         //         }
+        //     }
+        // },
 
-		// 		$(window).on("load scroll", function () {
-		// 			lineBannerPosition();
-		// 		});
+        lineBannerScrollEvt: function () {
+            const lineBanner = $(".line-banner-container");
+            const mainTabContent = $(".mainTab_content");
 
-
-		// 		$(window).on("load resize", function () {
-
-		// 		});
-
-		// 		function lineBannerPosition (){
-
-		// 			let windowScrollTop = $(window).scrollTop();
-        //             // let mainTabHeight = mainTabContent.outerHeight();
-		// 			// let mainTabOffset = mainTabContent.offset().top;
-					
-		// 			if ( windowScrollTop >= mainTabOffset) {
-
-		// 				if ($(window).width() <= 980) {
-		// 					console.log(mainTabOffset);
-
-		// 					const searchHeight = $(".filter_inner .search_type01").height();
-
-		// 					$(lineBanner).stop().css("top", (mainTabHeight + searchHeight - 10));
-		// 				}
-		// 				else {
-		// 					$(lineBanner).stop().css("top", mainTabHeight + 10);
-		// 				}
-
-		// 			}
-		// 			if(windowScrollTop < mainTabOffset) {
-		// 					console.log(mainTabOffset);
-						
-		// 				$(lineBanner).stop().css('top', '110px');
-		// 			}
-		// 		};
-		// 	}
-		// }
-		lineBannerScrollEvt: function() {
-			const lineBanner = $(".line-banner-container");
-			
-			if (lineBanner.hasClass('--active')) {
-				const mainTabContent = $(".mainTab_content");
-				let mainTabHeight, mainTabOffset;
-
-				function updateMainTabPosition() {
-					mainTabHeight = mainTabContent.outerHeight();
-					mainTabOffset = mainTabContent.offset().top;
-				}
+            if (lineBanner.hasClass("--active")) {
 
 				$(window).on("load resize", function () {
-                    updateMainTabPosition();
+					$();
+                });
+
+
+                $(window).on("load scroll resize", function () {
                     lineBannerPosition();
                 });
 
-				$(window).on("load scroll", function() {
-					lineBannerPosition();
-				});
+                function lineBannerPosition() {
+                    let windowScrollTop = $(window).scrollTop();
+                    let mainTabHeight = mainTabContent.outerHeight();
+                    let mainTabOffset = mainTabContent.offset().top;
 
-				function lineBannerPosition() {
-					let windowScrollTop = $(window).scrollTop();
-					
-					if (windowScrollTop >= mainTabOffset) {
-						if ($(window).width() <= 980) {
-							const searchHeight = $(".filter_inner .search_type01").height();
-							$(lineBanner).stop().css("top", (mainTabHeight + searchHeight - 10));
-						} else {
-							$(lineBanner).stop().css("top", mainTabHeight + 10);
-						}
-					} else {
-						$(lineBanner).stop().css('top', '110px');
-					}
-				}
-			}
-		}
+                    if (windowScrollTop >= mainTabOffset) {
+                        if ($(window).width() <= 980) {
+                            const searchHeight = $(".filter_inner .search_type01").height();
 
-
-        // lineBannerScrollEvt: function() {
-        // 	const lineBanner = $(".line-banner-container");
-        // 	const mainTabContent = $(".mainTab_content");
-        // 	let mainTabHeight = mainTabContent.outerHeight();
-        // 	let searchHeight = $(".filter_inner .search_type01").height();
-
-        // 	let mainTapMobilePositon = mainTabHeight + searchHeight - 10;
-        // 	let mainTapPCpositon = mainTabHeight - 10;
-        // 	let mainTabOffset;
-
-        // 	if ($(window).width() <= 980) {
-        // 		mainTabOffset = $(".mainTab_content").offset().top;
-        // 	} else {
-        // 		mainTabOffset = $(".mainTab_content").offset().top;
-        // 	}
-
-        // 	console.log(mainTapMobilePositon);
-
-        // 	if (lineBanner.hasClass('--active')) {
-        // 		$(window).on("load scroll resize", function() {
-        // 		lineBannerPosition();
-        // 		});
-
-        // 		function lineBannerPosition() {
-        // 		let windowScrollTop = $(window).scrollTop();
-        // 		if (windowScrollTop >= mainTabOffset) {
-        // 			if ($(window).width() <= 980) {
-        // 			$(lineBanner).css("top", mainTapMobilePositon);
-        // 			} else {
-        // 			$(lineBanner).css("top", mainTapPCpositon + 10);
-        // 			}
-        // 		}
-        // 		if (windowScrollTop < mainTabOffset) {
-        // 			$(lineBanner).stop().css('top', '110px');
-        // 		}
-        // 		};
-        // 	}
-
-        // 	$(window).on("resize", function() {
-        // 		if ($(window).width() <= 980) {
-        // 		mainTabOffset = $(".mainTab_content").offset().top;
-        // 		} else {
-        // 		mainTabOffset = $(".mainTab_content").offset().top;
-        // 		}
-        // 		lineBannerPosition();
-        // 	});
-        // 	}
+                            $(lineBanner)
+                                .stop()
+                                .css("margin-top", -5);
+                        } else {
+                            $(lineBanner)
+                                .stop()
+                                .css("margin-top", -70);
+                        }
+                    }
+                    if (windowScrollTop < mainTabOffset) {
+                        $(lineBanner).stop().css("margin-top", "0px");
+                    }
+                }
+            }
+        },
     },
     payment: {
         init: function () {
