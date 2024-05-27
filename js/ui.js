@@ -560,18 +560,19 @@ _SECRETMALL_.pages = {
 
 				
 				$(window).on("load resize", function () {
+
                     let mainTabHeight = mainTabContent.outerHeight();
 
-					let BannerPosition = mainTabHeight - 10;
+					let BannerPosition;
 
 
 					if ($(window).width() <= 980) {
                         let searchHeight = $(".filter_inner .search_type01").height();
 
-						BannerPosition = BannerPosition + searchHeight;
+						BannerPosition = mainTabHeight + searchHeight - 10;
                         
                     } else {
-						BannerPosition;
+						BannerPosition = mainTabHeight;
                     }
 
 					$(window).on("scroll", function () {
