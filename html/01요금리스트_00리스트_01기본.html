@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> N 호텔 제휴 시크릿몰 </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/pages.css" />
+
+	<script src="../js/jquery-2.2.4.min.js"></script>
+	<script src="../js/swiper-bundle.min.js"></script>
+	<script src="../js/ui.js"></script>
+
+</head>
+<body class="chargeListPage">
+
+
+
+	<div class="container">
+
+		<!-- s: HEADER -->
+		<header class="header_container" id="header_container">
+			<div class="header_inner">
+				<h1 class="logo">호텔 제휴 시크릿몰</h1>
+				<h2 class="hidden_obj">요금리스트</h2>
+				<!-- <em class="triptopaz">Triptopaz</em> -->
+				<!-- s: 회원 -->
+				<div class="memberBox">
+					<button class="inner btn-member">
+
+						<!-- To.개발 : 사용자 프로필이 없을 때, .nick 영역 전체를 제거하거나, 주석처리 부탁드립니다.-->
+						<div class="nick">
+							<span class="prf"><img src="../temp/img_room03_01.png" /></span>
+							<span class="name"><span class="in">엘사와올라프</span></span>
+						</div>
+
+					</button>
+					
+					<!-- s: 회원 tooltip -->
+					<div class="member-info">
+						<div class="member-info__top">
+							<div class="member-info__name"><b>올라프****</b>님</div>
+							<button class="btn-logout">로그아웃</button>
+						</div>
+						<ul class="member-info__list">
+							<li class="ico1"><a href="https://naver.triptopaz.com">시크릿몰 홈</a></li>
+							<li><a href="https://naver.triptopaz.com/Mypage/ReservationList">마이페이지</a></li>
+						</ul>
+					</div>
+					<!-- e: 회원 tooltip -->
+				</div>
+				<!-- e: 회원 -->
+				<!-- s: 등급 -->
+				<!-- To.개발:
+					<div class="grade g01">베이직</div>
+					<div class="grade g02">스마트</div>
+					<div class="grade g03">골드</div>
+				-->
+				<div class="grade g03">골드</div>
+				<!-- e: 등급 -->
+			</div>
+		</header>
+		<!-- e: HEADER -->
+
+		<!-- s: BODY -->
+		<div class="body_container chargeList_page">
+			<main class="body_inner" id="mainContent">
+
+				<p class="noticeTxt_type01">상품 판매 및 서비스의 제공은 <strong class="pointc01">트립토파즈</strong>의 책임 하에 운영되고 있습니다.</p>
+
+				<!-- s: roomViewer -->
+				<section class="roomViewer_contenet">
+					<!-- s: viewer -->
+					<div class="viewer_type01" id="_mainRoomViewer">
+						<!-- s: swiper -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a href="#"><img src="../temp/img_room03_01.png" /><span class="cont">대표 사진</span></a></div>
+								<div class="swiper-slide"><a href="#"><img src="../temp/img_room03_02.png" /><span class="cont">설명문구111</span></a></div>
+								<div class="swiper-slide"><a href="#"><img src="../temp/img_room02_01.png" /><span class="cont">설명문구222</span></a></div>
+								<div class="swiper-slide"><a href="#"><img src="../temp/img_room02_02.png" /><span class="cont">설명문구333</span></a></div>
+								<div class="swiper-slide"><a href="#"><img src="../temp/img_room02_03.png" /><span class="cont">설명문구444</span></a></div>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button swiper-button-prev"></div>
+							<div class="swiper-button swiper-button-next"></div>
+						</div>
+						<!-- e: swiper -->
+						<script type="text/javascript">
+							$(function(){
+								var mainRoomViewer = new Swiper('#_mainRoomViewer .swiper-container', _swiperOption.mainRoomViewer('#_mainRoomViewer .swiper-container') );
+							});
+						</script>
+						<p class="noticeTxt">사진 정보는 참고용으로 실제와 다를 수 있습니다.</p>
+					</div>
+					<!-- e: viewer -->
+					<!-- s: more -->
+					<div class="more_inner">
+						<ul>
+							<li><a href="#"><img src="../temp/img_room02_01.png" /></a></li>
+							<li><a href="#"><img src="../temp/img_room02_02.png" /></a></li>
+							<li><a href="#"><img src="../temp/img_room02_03.png" /></a></li>
+							<li><a href="#"><img src="../temp/img_room02_01.png" /><span class="n">127개</span></a></li>
+						</ul>
+					</div>
+					<!-- e: more -->
+				</section>
+				<!-- e: roomViewer -->
+
+				<!-- s: 탭 -->
+				<div class="mainTab_content">
+					<!-- s: tab -->
+					<div class="tab_type03">
+						<ul class="tab_inner">
+							<li class="on"><a href="#mainContent">소개</a></li>
+							<li><a href="#divRateContainer">객실</a></li>
+							<li><a href="#hotelInfoSection">호텔정보</a></li>
+						</ul>
+						<div class="tab-slider"></div>
+						<div class="rBox">
+							<a href="#" class="btn_type06 c01">여행지 변경</a>
+						</div>
+					</div>
+					<!-- e: tab -->
+				</div>
+				<!-- e: 탭 -->
+
+				<!-- s: summary -->
+				<div class="summary_content">
+					<div class="titleBox">
+						<h3 class="prdTitle">Shilla Stay Samsung</h3>
+						<span class="npay">네이버페이</span>
+					</div>
+					<em class="subTitle">신라스테이 삼성</em>
+					<div class="infoBox">
+						<!-- To.개발:
+							1성급	: class="grade_type01 star1"
+							1.5성급	: class="grade_type01 star1_5"
+							2성급	: class="grade_type01 star2"
+							2.5성급	: class="grade_type01 star2_5"
+							3성급	: class="grade_type01 star3"
+							3.5성급	: class="grade_type01 star3_5"
+							4성급	: class="grade_type01 star4"
+							4.5성급	: class="grade_type01 star4_5"
+							5성급	: class="grade_type01 star5"
+						-->
+						<i class="grade_type01 star3_5">3.5성급</i>
+						<span class="address">서울특별시 강남구 영동대로 506</span>
+					</div>
+					<div class="rtBox">
+						<a href="#" class="btnWindow">새창열기</a>
+					</div>
+					<div class="rbBox">
+						<a href="#hotelInfoSection" class="btnInfo">지도보기</a>
+					</div>
+				</div>
+				<!-- e: summary -->
+
+				<!-- s: notice -->
+				<div class="notice_content">
+					<h4 class="title">월간시크릿몰 2월 특가 전용 예약페이지입니다.</h4>
+					<p class="cont">
+						예약기간 2023.02.01~2023.02.15<br />
+						투숙기간 2023.02.01~2023.04.30<br />
+						* 일자에 따라 특가 객실이 마감된 경우도 있습니다.
+					</p>
+				</div>
+				<!-- e: notice -->
+
+				<div class="detail_content">
+					<!-- s: sticky플러그인 -->
+					<script type="text/javascript" src="../js/rAF.js"></script>
+					<script type="text/javascript" src="../js/ResizeSensor.js"></script>
+					<script type="text/javascript" src="../js/sticky-sidebar.js"></script>
+					<script type="text/javascript">
+						$(function(){
+							if( $(window).width() > 980 ){
+								stickySidebar = new StickySidebar('.chargeList_page .detail_content .filter_inner', {
+									topSpacing: 51,
+									bottomSpacing: 20,
+									containerSelector: '.detail_content',
+									innerWrapperSelector: '.sidebar_inner'
+								});
+							}
+						});
+					</script>
+					<!-- e: sticky플러그인 -->
+					<!-- s: filter -->
+					<div class="filter_inner">
+						<h4 class="hidden_obj">필터</h4>
+						<div class="sidebar_inner"> <!-- 230919 div.sidebar_inner 추가 -->
+							<!-- s: 객실검색 -->
+							<div class="search_type01">
+								<div class="s_inner">
+									<div class="s_item">
+										<button type="button" class="inner">
+											<span class="tit chkIn">체크인</span>
+											<span class="ct">
+												<span class="pcOnly">2022.</span>11.26 토
+											</span>
+										</button>
+									</div>
+									<div class="s_item">
+										<button type="button" class="inner">
+											<span class="tit chkOut">체크아웃</span>
+											<span class="ct">
+												<span class="pcOnly">2022.</span>11.27 일
+											</span>
+										</button>
+									</div>
+									<div class="s_item">
+										<button type="button" class="inner">
+											<span class="tit user">인원</span>
+											<span class="ct">
+												<span class="in">성인 2</span>
+												<span class="in">아동 0</span>
+											</span>
+										</button>
+									</div>
+								</div>
+								<!-- s: calendar -->
+								<!-- To.개발:
+									달력닫기	: class="calendar_container"
+									달력열기	: class="calendar_container visible"
+								-->
+								<section class="calendar_container ">
+									<!-- s: 이전달 -->
+									<div class="cal_inner">
+										<div class="cal_header">
+											<!-- To.개발:
+												활성화	: <button type="button" class="btnCal prv">이전달</button>
+												비활성화	: <span class="btnCal prv">이전달</span>
+											-->
+											<span class="btnCal prv">이전달</span>
+											<strong class="month">2023년 03월</strong>
+										</div>
+										<div class="cal_content">
+											<table>
+												<thead>
+													<tr>
+														<th>일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th>토</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="sun"></td>
+														<td></td>
+														<td></td>
+														<td><span class="date">1</span></td>
+														<td><span class="date">2</span></td>
+														<td><span class="date">3</span></td>
+														<td><span class="date">4</span></td>
+													</tr>
+													<tr>
+														<td class="sun"><span class="date">5</span></td>
+														<td><span class="date">6</span></td>
+														<td><span class="date">7</span></td>
+														<td><a href="#" class="date">8<span class="txt">오늘</span></a></td>
+														<td><a href="#" class="date">9<span class="txt">8.9만</span></a></td>
+														<td><a href="#" class="date">10<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">11<span class="txt low">7.8만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">12<span class="txt high">9.9만</span></a></td>
+														<td><button type="button" class="date selected start">13<span class="txt">체크인</span></button></td>
+														<td><button type="button" class="date selected ing">14<span class="txt high">9.9만</span></button></td>
+														<td><button type="button" class="date selected ing">15<span class="txt low">7.8만</span></button></td>
+														<td><button type="button" class="date selected end">16<span class="txt">체크아웃</span></button></td>
+														<td><a href="#" class="date">17<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">18<span class="txt low">7.8만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">19<span class="txt high">9.9만</span></a></td>
+														<td class="holiday"><a href="#" class="date">20<span class="txt high">9.9만</span></a></td>
+														<td class="holiday"><a href="#" class="date">21<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">22<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">23<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">24<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">25<span class="txt high">9.9만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">26<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">27<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">28<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">29<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">30<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">31<span class="txt high">9.9만</span></a></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td class="sun"></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p class="cal_notice">체크인 및 체크아웃은 현지시각 기준입니다</p>
+									</div>
+									<!-- e: 이전달 -->
+									<!-- s: 다음달 -->
+									<div class="cal_inner">
+										<div class="cal_header">
+											<strong class="month">2023년 04월</strong>
+											<!-- To.개발:
+												활성화	: <button type="button" class="btnCal nxt">다음달</button>
+												비활성화	: <span class="btnCal nxt">다음달</span>
+											-->
+											<button type="button" class="btnCal nxt">다음달</button>
+										</div>
+										<div class="cal_content">
+											<table>
+												<thead>
+													<tr>
+														<th>일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th>토</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="sun"></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td><a href="#" class="date">1<span class="txt high">9.9만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">2<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">3<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">4<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">5<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">6<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">7<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">8<span class="txt high">9.9만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">9<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">10<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">11<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">12<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">13<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">14<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">15<span class="txt high">9.9만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">16<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">17<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">18<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">19<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">20<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">21<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">22<span class="txt low">7.8만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">23<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">24<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">25<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">26<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">27<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">28<span class="txt low">7.8만</span></a></td>
+														<td><a href="#" class="date">29<span class="txt high">9.9만</span></a></td>
+													</tr>
+													<tr>
+														<td class="sun"><a href="#" class="date">30<span class="txt high">9.9만</span></a></td>
+														<td><a href="#" class="date">31<span class="txt high">9.9만</span></a></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<!-- e: 다음달 -->
+								</section>
+								<script type="text/javascript">
+									$(function(){
+										_SECRETMALL_.autoClose('.calendar_container', 'visible');
+										_SECRETMALL_.autoClose('.userCount_container', 'visible');
+									});
+								</script>
+								<!-- e: calendar -->
+								<!-- s: userCount -->
+								<!-- To.개발:
+									숙박인원닫기	: class="userCount_container"
+									숙박인원열기	: class="userCount_container visible"
+								-->
+								<section class="userCount_container ">
+
+									<div class="uCnt_count">
+										<div class="inner">
+											<span class="tit">성인<span class="sub">만 18세 이상</span></span>
+											<div class="countBox">
+												<span class="count_type01 de">감소</span>
+												<span class="num">1</span>
+												<button type="button" class="count_type01 in">증가</button>
+											</div>
+										</div>
+										<div class="inner">
+											<span class="tit">아동<span class="sub">만 0세 ~ 17세</span></span>
+											<div class="countBox">
+												<button type="button" class="count_type01 de">감소</button>
+												<span class="num">4</span>
+												<span class="count_type01 in">증가</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="uCnt_age">
+										<p class="desc">아동 나이를 입력해주세요 <span class="sub">(만 나이)</span></p>
+										<div class="inner">
+											<div class="inBox">
+												<!-- s: selectBox -->
+												<div class="selectBox01">
+													<label for="" class="valTxt">선택선택선택선택선택선택선택</label>
+													<select id="">
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</div>
+												<!-- e: selectBox -->
+											</div>
+											<div class="inBox">
+												<!-- s: selectBox -->
+												<div class="selectBox01">
+													<label for="" class="valTxt">선택선택선택선택선택선택선택</label>
+													<select id="">
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</div>
+												<!-- e: selectBox -->
+											</div>
+											<div class="inBox">
+												<!-- s: selectBox -->
+												<div class="selectBox01">
+													<label for="" class="valTxt">선택선택선택선택선택선택선택</label>
+													<select id="">
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</div>
+												<!-- e: selectBox -->
+											</div>
+											<div class="inBox">
+												<!-- s: selectBox -->
+												<div class="selectBox01">
+													<label for="" class="valTxt">선택선택선택선택선택선택선택</label>
+													<select id="">
+														<option>선택1</option>
+														<option>선택2</option>
+														<option>선택3</option>
+													</select>
+												</div>
+												<!-- e: selectBox -->
+											</div>
+										</div>
+									</div>
+
+									<p class="uCnt_notice">아동을 포함하여 요금 조회시, 인원이 명시되지 않은 식사 포함 요금은 성인 인원 기준 포함입니다. 아동의 경우는 현장 지불입니다.</p>
+
+									<div class="uCnt_btn">
+										<button type="button" class="btn_type02 c01 h01">적용하기</button>
+									</div>								
+									
+								</section>
+								<!-- e: userCount -->
+							</div>
+							<!-- e: 객실검색 -->
+							<div class="btn_wrap">
+								<button type="button" class="btn_type02 c01">객실 검색</button>
+							</div>
+							<!-- s: 필터 230808 -->
+							<div class="filter_wrap">
+								<div class="header_in">
+									<button type="button" class="title on">조건</button>
+									<button type="button" class="title">객실유형</button>
+								</div>
+								<div class="inner on">
+									<h5 class="title">조건</h5>
+									<ul>
+										<li><label class="chkBox01"><input type="checkbox" checked="checked" /><span class="c_name">전체 (30)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">조식포함 (15)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">무료예약취소 (21)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" disabled="disabled" /><span class="c_name">후불결제 (8)</span></span></label></li>
+									</ul>
+								</div>
+								<div class="inner">
+									<h5 class="title">객실유형</h5>
+									<ul>
+										<li><label class="chkBox01"><input type="checkbox" checked="checked" /><span class="c_name">전체 (47)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">패밀리 (5)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">트윈 (11)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">킹 (8)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">시티뷰 (8)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">디럭스 (6)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+										<li><label class="chkBox01"><input type="checkbox" /><span class="c_name">오션뷰 (9)</span></span></label></li>
+									</ul>
+								</div>
+							</div>
+							<!-- e: 필터 230808 -->
+						</div>
+					</div>
+					<!-- e: filter -->
+					<!-- s: mainContent -->
+					<div class="mainContent_inner" id="divRateContainer">
+						<!-- s: loading -->
+						<div class="loading_section">
+							<div class="loading_type01">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+						<!-- e: loading -->
+						<!-- s: nodata -->
+						<div class="nodata_type01">
+							<p class="n_txt01">예약 가능한 객실이 없습니다.</p>
+							<p class="n_txt02">날짜를 변경 후 다시 검색해주세요.</p>
+							<div class="n_btnBox">
+								<a href="#" class="btn_type02 c01 h01">일정 변경</a>
+							</div>
+						</div>
+						<!-- e: nodata -->
+						<!-- s: 숙박페스타 230519 -->
+						<div class="salefesta_section event_type230523"> <!-- 230523 클래스 추가 -->
+							<div class="section_inner">
+								<p class="notiTxt"><strong class="pt01">[OTA 트립토파즈]</strong>는 [2024 숙박 할인권 지원 사업]의 숙박할인 쿠폰 발급 및 사용을 위해 아래와 같이 개인정보를 수집ㆍ이용 및 제3자 제공하고자 합니다. <em class="pt02">해당 내용을 자세히 읽으신 후 동의 여부를 결정하여 주십시오.</em></p>
+								<!-- s: 약관동의 -->
+								<div class="law_wrap">
+									<!-- s: item -->
+									<div class="a_item">
+										<div class="content_in">
+											<label class="chkBox04"><input type="checkbox" /><span class="c_name">개인정보 수집ㆍ이용 동의 <span class="pt">(필수)</span></span></span></label>
+											<button type="button" class="btnMore">자세히보기</button>
+										</div>
+										<div class="detail_in">
+											<div class="table">
+												<table>
+													<colgroup>
+														<col style="width:20%;" />
+														<col />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th>수집ㆍ이용 목적</th>
+															<td>숙박 할인 쿠폰 발급 및 사용</td>
+														</tr>
+														<tr>
+															<th>수집 항목</th>
+															<td>사용자 거주시(시/군/구 단위), 구매정보(결제액, 시설명, 입실일, 숙박일수), 생년, 성별, 인증정보(CI)</td>
+														</tr>
+														<tr>
+															<th>보유 및 이용기간</th>
+															<td>이벤트 종료 후 4개월 이내</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="txt">※ 위의 개인정보 수집ㆍ이용에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우 숙박할인 쿠폰 지원 혜택에 제한이 있을 수 있습니다.</p>
+										</div>
+									</div>
+									<!-- e: item -->
+									<!-- s: item -->
+									<div class="a_item">
+										<div class="content_in">
+											<label class="chkBox04"><input type="checkbox" /><span class="c_name">개인정보 제3자 제공 동의 <span class="pt">(필수)</span></span></span></label>
+											<button type="button" class="btnMore">자세히보기</button>
+										</div>
+										<div class="detail_in">
+											<div class="table">
+												<table>
+													<colgroup>
+														<col style="width:20%;" />
+														<col />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th>제공받는 자</th>
+															<td>한국관광공사, SK M&Service(본 사업의 통합 관리 운영 대행사)</td>
+														</tr>
+														<tr>
+															<th>제공 목적</th>
+															<td>감염병 위기 대응(전파 차단), 숙박 할인 쿠폰 지급</td>
+														</tr>
+														<tr>
+															<th>제공 항목</th>
+															<td>사용자 거주지(시/군/구), 예약정보(결제액, 시설명, 입실일, 숙박일수), 생년, 성별, 인증정보(CI)</td>
+														</tr>
+														<tr>
+															<th>보유 및 이용기간</th>
+															<td>이벤트 종료 후 4개월 이내</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<p class="txt">※ 위의 개인정보 제3자 제공에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우 숙박할인 쿠폰 지원 혜택에 제한이 있을 수 있습니다.</p>
+										</div>
+									</div>
+									<!-- e: item -->
+								</div>
+								<!-- e: 약관동의 -->
+								<div class="agree_wrap">
+									<label class="chkBox04"><input type="radio" name="_salefesta" /><span class="c_name">모두 동의함</span></span></label>
+									<label class="chkBox04"><input type="radio" name="_salefesta" /><span class="c_name">동의하지 않음</span></span></label>
+								</div>
+								<!-- s: 거주지선택 -->
+								<div class="area_wrap">
+									<div class="header_in">※ 사용자 거주지 선택 <em class="pt">(필수)</em></div>
+									<div class="content_in">
+										<!-- s: selectBox -->
+										<span class="selectBox01">
+											<label for="" class="valTxt">선택1</label>
+											<select>
+												<option>선택1</option>
+												<option>선택2</option>
+												<option>선택3</option>
+											</select>
+										</span>
+										<!-- e: selectBox -->
+										<!-- s: selectBox -->
+										<span class="selectBox01">
+											<label for="" class="valTxt">선택1</label>
+											<select>
+												<option>선택1</option>
+												<option>선택2</option>
+												<option>선택3</option>
+											</select>
+										</span>
+										<!-- e: selectBox -->
+									</div>
+									<p class="txt01">※ 쿠폰 중복 발급 방지를 위하여 본인인증 절차가 필요합니다.</p>
+									<p class="txt02">(PC 이용시, 크롬(Chrome) 브라우저 사용을 권장합니다.)</p>
+								</div>
+								<!-- e: 거주지선택 -->
+								<div class="btn_wrap">
+									<a href="#" class="btn">2024 대한민국 숙박 세일 페스타 이용하기</a>
+								</div>
+							</div>
+						</div>
+						<script type="text/javascript">
+							$(function(){
+								_SECRETMALL_.toggleOpen.whole('.chargeList_page .detail_content .salefesta_section .law_wrap .content_in .btnMore', '.a_item');
+							});
+						</script>
+						<!-- e: 숙박페스타 230519 -->
+						<!-- s: 추천특가 230808 -->
+						<div class="recmd_section">
+							<h4 class="recmd_title">시크릿몰 추천 특가</h4>
+							<div class="section_inner">
+								<h5 class="item_title">Best 특가</h5>
+								<!-- s: productList -->
+								<article class="prdList_type01">
+									<h4 class="hidden_obj">룸 정보</h4>
+									<div class="p_inner">
+										<!-- s: item -->
+										<div class="p_item">
+											<a href="#" class="thumbBox">
+												<div class="inner">
+													<span class="label">네이버에서 확인한 가격</span>
+													<img src="../temp/img_room01_01.jpg" />
+												</div>
+											</a>
+											<div class="p_content">
+												<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용</a></strong>
+												<div class="infoBox">
+													<ul>
+														<li class="ct">01 king bed request</li> <!-- 230727 추가 -->
+														<li class="ct">식사 불포함</li>
+														<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+													</ul>
+												</div>
+												<div class="priceBox">
+													<div class="grade_in">
+														<i class="label_type01 c01">
+															<a href="#" class="lCt01">베이직등급</a>
+															<span class="lCt02">4.7% 할인</span>
+														</i>
+													</div>
+													<div class="price_in">
+														<del class="cost"><span class="n">408,773</span>원</del>
+														<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+														<!-- s: layerPopup -->
+														<section class="layerPopup_container l_fee_page">
+															<header class="lPop_header">
+																<h1 class="title">요금 세부 정보</h1>
+															</header>
+															<div class="lPop_body">
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tfoot>
+																			<tr>
+																				<th>총 금액</th>
+																				<td><strong>222,802</strong>원</td>
+																			</tr>
+																		</tfoot>
+																		<tbody>
+																			<tr>
+																				<th>객실</th>
+																				<td>190,532원</td>
+																			</tr>
+																			<tr>
+																				<th>세금 및 봉사료</th>
+																				<td>50,647원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>스마트 등급 고객 할인</th>
+																				<td>-11,485원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>시크릿 할인</th>
+																				<td>-6,891원</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+																<h2 class="feeTitle">불포함 내역</h2>
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tbody>
+																			<tr class="pt">
+																				<th>의무부과세</th>
+																				<td>10,551원</td>
+																			</tr>
+																			<tr>
+																				<td colspan="2" class="tal"><span class="t_txt01">투숙기간 중 1회 부과</span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+															</div>
+															<button type="button" class="lPop_close">레이어팝업 닫기</button>
+														</section>
+														<!-- e: layerPopup -->
+													</div>
+													<div class="npay_in">
+														<span class="point">1% 적립시 285,415원</span>
+													</div>
+												</div>
+												<div class="subBox">
+													<a href="#" class="info">객실정보</a>
+												</div>
+											</div>
+										</div>
+										<!-- e: item -->
+
+										<!-- 240509 추가 : p_item__accordion -->
+										<div class="p_item__accordion">
+											<div class="accordion">
+												<button class="accordion__title" onclick="slideEvt(this, '.accordion', '.accordion__content')">
+													<strong>최대 적립 포인트 9%</strong>
+													<span>33,901원</span>
+												</button>
+												<div class="accordion__content">
+													<div class="accordion__content__inner">
+														<div class="point_wrap">
+															<!-- s: feeTable -->
+															<div class="feeTable_type03">
+																<table>
+																	<colgroup>
+																		<col style="width:70%;">
+																		<col>
+																	</colgroup>
+																	<tfoot>
+																		<tr>
+																			<th>총 적립금</th>
+																			<td>10,381 원</td>
+																		</tr>
+																	</tfoot>
+																	<tbody>
+																		<tr>
+																			<th>
+																				<span class="t_tit">기본적립 (1%)</span>
+																				<span class="t_sub">적립 예정일 : 2022.12.07.</span>
+																			</th>
+																			<td>2,076 원</td>
+																		</tr>
+																		<tr>
+																			<th>
+																				<span class="t_tit">
+																					KB국민/롯데/하나/NH농협<br>
+																					네이버페이 카드 간편결제시 4% 추가적립<br>
+																					카드사별 조건 <a href="#" class="pointc02">ⓘ</a>
+																				</span>
+																				<span class="t_sub">적립 예정일 : 2022.12.07.</span>
+																			</th>
+																			<td>8,350 원</td>
+																		</tr>
+																		<tr>
+																			<th colspan="2" class="sub">
+																				※ 네이버플러스 멤버십 추가적립은 네이버페이 결제창에서 상세확인 가능합니다.
+																			</th>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<!-- e: feeTable -->
+														</div>
+														<div class="membership_wrap">
+															<div class="inner">
+																<strong class="tit">네이버페이 최대 5% 적립</strong>
+																<p class="txt">네이버플러스 멤버십 추가적립 상품입니다.</p>
+																<a href="#" class="btnMore">더보기</a>
+															</div>
+															<div class="payBox">
+																<p class="txt">아직 플러스 멤버십이 아니라면?</p>
+																<a href="#" class="btnGo">구독하러 가기</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- /240509 추가 : p_item__accordion -->
+										
+									</div>
+								</article>
+								<!-- e: productList -->
+							</div>
+							<div class="section_inner">
+								<h5 class="item_title">무료예약취소</h5>
+								<!-- s: productList -->
+								<article class="prdList_type01">
+									<h4 class="hidden_obj">룸 정보</h4>
+									<div class="p_inner">
+										<!-- s: item -->
+										<div class="p_item">
+											<a href="#" class="thumbBox">
+												<div class="inner">
+													<span class="label">네이버에서 확인한 가격</span>
+													<img src="../temp/img_room01_01.jpg" />
+												</div>
+											</a>
+											<div class="p_content">
+												<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용</a></strong>
+												<div class="infoBox">
+													<ul>
+														<li class="ct">01 king bed request</li> <!-- 230727 추가 -->
+														<li class="ct">식사 불포함</li>
+														<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+													</ul>
+												</div>
+												<div class="priceBox">
+													<div class="grade_in">
+														<i class="label_type01 c01">
+															<a href="#" class="lCt01">베이직등급</a>
+															<span class="lCt02">4.7% 할인</span>
+														</i>
+													</div>
+													<div class="price_in">
+														<del class="cost"><span class="n">408,773</span>원</del>
+														<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+														<!-- s: layerPopup -->
+														<section class="layerPopup_container l_fee_page">
+															<header class="lPop_header">
+																<h1 class="title">요금 세부 정보</h1>
+															</header>
+															<div class="lPop_body">
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tfoot>
+																			<tr>
+																				<th>총 금액</th>
+																				<td><strong>222,802</strong>원</td>
+																			</tr>
+																		</tfoot>
+																		<tbody>
+																			<tr>
+																				<th>객실</th>
+																				<td>190,532원</td>
+																			</tr>
+																			<tr>
+																				<th>세금 및 봉사료</th>
+																				<td>50,647원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>스마트 등급 고객 할인</th>
+																				<td>-11,485원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>시크릿 할인</th>
+																				<td>-6,891원</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+																<h2 class="feeTitle">불포함 내역</h2>
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tbody>
+																			<tr class="pt">
+																				<th>의무부과세</th>
+																				<td>10,551원</td>
+																			</tr>
+																			<tr>
+																				<td colspan="2" class="tal"><span class="t_txt01">투숙기간 중 1회 부과</span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+															</div>
+															<button type="button" class="lPop_close">레이어팝업 닫기</button>
+														</section>
+														<!-- e: layerPopup -->
+													</div>
+													<div class="npay_in">
+														<span class="point">1% 적립시 285,415원</span>
+													</div>
+												</div>
+												<div class="subBox">
+													<a href="#" class="info">객실정보</a>
+												</div>
+											</div>
+										</div>
+										<!-- e: item -->
+									</div>
+								</article>
+								<!-- e: productList -->
+							</div>
+							<div class="section_inner">
+								<h5 class="item_title">조식포함</h5>
+								<!-- s: productList -->
+								<article class="prdList_type01">
+									<h4 class="hidden_obj">룸 정보</h4>
+									<div class="p_inner">
+										<!-- s: item -->
+										<div class="p_item">
+											<a href="#" class="thumbBox">
+												<div class="inner">
+													<span class="label">네이버에서 확인한 가격</span>
+													<img src="../temp/img_room01_01.jpg" />
+												</div>
+											</a>
+											<div class="p_content">
+												<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용</a></strong>
+												<div class="infoBox">
+													<ul>
+														<li class="ct">01 king bed request</li> <!-- 230727 추가 -->
+														<li class="ct">식사 불포함</li>
+														<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+													</ul>
+												</div>
+												<div class="priceBox">
+													<div class="grade_in">
+														<i class="label_type01 c01">
+															<a href="#" class="lCt01">베이직등급</a>
+															<span class="lCt02">4.7% 할인</span>
+														</i>
+													</div>
+													<div class="price_in">
+														<del class="cost"><span class="n">408,773</span>원</del>
+														<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+														<!-- s: layerPopup -->
+														<section class="layerPopup_container l_fee_page">
+															<header class="lPop_header">
+																<h1 class="title">요금 세부 정보</h1>
+															</header>
+															<div class="lPop_body">
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tfoot>
+																			<tr>
+																				<th>총 금액</th>
+																				<td><strong>222,802</strong>원</td>
+																			</tr>
+																		</tfoot>
+																		<tbody>
+																			<tr>
+																				<th>객실</th>
+																				<td>190,532원</td>
+																			</tr>
+																			<tr>
+																				<th>세금 및 봉사료</th>
+																				<td>50,647원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>스마트 등급 고객 할인</th>
+																				<td>-11,485원</td>
+																			</tr>
+																			<tr class="npay">
+																				<th>시크릿 할인</th>
+																				<td>-6,891원</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+																<h2 class="feeTitle">불포함 내역</h2>
+
+																<!-- s: feeTable -->
+																<div class="feeTable_type01">
+																	<table>
+																		<colgroup>
+																			<col style="width:65%;" />
+																			<col />
+																		</colgroup>
+																		<tbody>
+																			<tr class="pt">
+																				<th>의무부과세</th>
+																				<td>10,551원</td>
+																			</tr>
+																			<tr>
+																				<td colspan="2" class="tal"><span class="t_txt01">투숙기간 중 1회 부과</span></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- e: feeTable -->
+
+															</div>
+															<button type="button" class="lPop_close">레이어팝업 닫기</button>
+														</section>
+														<!-- e: layerPopup -->
+													</div>
+													<div class="npay_in">
+														<span class="point">1% 적립시 285,415원</span>
+													</div>
+												</div>
+												<div class="subBox">
+													<a href="#" class="info">객실정보</a>
+												</div>
+											</div>
+										</div>
+										<!-- e: item -->
+									</div>
+								</article>
+								<!-- e: productList -->
+							</div>
+							<div class="btn_inner">
+								<button type="button" class="btnMore">전체요금보기</button>
+							</div>
+						</div>
+						<!-- e: 추천특가 230808 -->
+						<div class="noticeTxt_type02">
+							<p class="ct">세금 및 봉사료 포함 가격입니다</p>
+						</div>
+						<!-- s: productList -->
+						<article class="prdList_type01">
+							<h4 class="hidden_obj">룸 정보</h4>
+							<div class="p_inner">
+								<!-- s: item -->
+								<div class="p_item">
+									<a href="#" class="thumbBox">
+										<div class="inner">
+											<span class="label">네이버에서 확인한 가격</span>
+											<img src="../temp/img_room01_01.jpg" />
+										</div>
+									</a>
+									<div class="p_content">
+										<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용</a></strong>
+										<div class="infoBox">
+											<ul>
+												<li class="ct">01 king bed request</li> <!-- 230727 추가 -->
+												<li class="ct">식사 불포함</li>
+												<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+											</ul>
+										</div>
+										<div class="priceBox">
+											<div class="grade_in">
+												<i class="label_type01 c01">
+													<a href="#" class="lCt01">베이직등급</a>
+													<span class="lCt02">4.7% 할인</span>
+												</i>
+											</div>
+											<div class="price_in">
+												<del class="cost"><span class="n">408,773</span>원</del>
+												<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+												<!-- s: layerPopup -->
+												<section class="layerPopup_container l_fee_page">
+													<header class="lPop_header">
+														<h1 class="title">요금 세부 정보</h1>
+													</header>
+													<div class="lPop_body">
+
+														<!-- s: feeTable -->
+														<div class="feeTable_type01">
+															<table>
+																<colgroup>
+																	<col style="width:65%;" />
+																	<col />
+																</colgroup>
+																<tfoot>
+																	<tr>
+																		<th>총 금액</th>
+																		<td><strong>222,802</strong>원</td>
+																	</tr>
+																</tfoot>
+																<tbody>
+																	<tr>
+																		<th>객실</th>
+																		<td>190,532원</td>
+																	</tr>
+																	<tr>
+																		<th>세금 및 봉사료</th>
+																		<td>50,647원</td>
+																	</tr>
+																	<tr class="npay">
+																		<th>스마트 등급 고객 할인</th>
+																		<td>-11,485원</td>
+																	</tr>
+																	<tr class="npay">
+																		<th>시크릿 할인</th>
+																		<td>-6,891원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- e: feeTable -->
+
+														<h2 class="feeTitle">불포함 내역</h2>
+
+														<!-- s: feeTable -->
+														<div class="feeTable_type01">
+															<table>
+																<colgroup>
+																	<col style="width:65%;" />
+																	<col />
+																</colgroup>
+																<tbody>
+																	<tr class="pt">
+																		<th>의무부과세</th>
+																		<td>10,551원</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2" class="tal"><span class="t_txt01">투숙기간 중 1회 부과</span></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- e: feeTable -->
+
+													</div>
+													<button type="button" class="lPop_close">레이어팝업 닫기</button>
+												</section>
+												<!-- e: layerPopup -->
+											</div>
+											<div class="npay_in">
+												<span class="point">1% 적립시 285,415원</span>
+											</div>
+										</div>
+										<div class="subBox">
+											<a href="#" class="info">객실정보</a>
+										</div>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: banner -->
+								<aside class="banner_type01"><a href="#">배너</a></aside>
+								<!-- e: banner -->
+								<!-- s: banner -->
+								<aside class="banner_type01" id="_bannerViewer">
+									<!-- s: swiper -->
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a href="#">배너</a></div>
+											<div class="swiper-slide"><a href="#">배너</a></div>
+											<div class="swiper-slide"><a href="#">배너</a></div>
+										</div>
+										<div class="swiper-pagination"></div>
+										<div class="swiper-button swiper-button-prev"></div>
+										<div class="swiper-button swiper-button-next"></div>
+									</div>
+									<!-- e: swiper -->
+									<script type="text/javascript">
+										$(function(){
+											var bannerViewer = new Swiper('#_bannerViewer .swiper-container', _swiperOption.common('#_bannerViewer') );
+										});
+									</script>
+								</aside>
+								<!-- e: banner -->
+								<!-- s: item -->
+								<!-- To.개발:
+									숙박페스타 : class="p_item festa"
+								-->
+								<div class="p_item festa">
+									<a href="#" class="thumbBox">
+										<div class="inner">
+											<img src="../temp/img_room01_01.jpg" />
+										</div>
+									</a>
+									<div class="p_content">
+										<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용</a></strong>
+										<div class="infoBox">
+											<ul>
+												<li class="ct">식사 불포함</li>
+												<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+											</ul>
+										</div>
+										<div class="priceBox">
+											<div class="grade_in">
+												<i class="label_type01 c02">
+													<a href="#" class="lCt01">스마트등급</a>
+													<span class="lCt02">4.7% 할인</span>
+												</i>
+											</div>
+											<div class="price_in">
+												<del class="cost"><span class="n">408,773</span>원</del>
+												<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+											</div>
+											<div class="festa_in">
+												<a href="#" class="btn">숙박페스타 쿠폰받기</a>
+												<em class="won">적용가 359,308원</em>
+											</div>
+											<div class="npay_in">
+												<span class="point">1% 적립시 285,415원</span>
+											</div>
+										</div>
+										<div class="subBox">
+											<a href="#" class="info">객실정보</a>
+										</div>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="p_item">
+									<a href="#" class="thumbBox">
+										<div class="inner">
+											<img src="../temp/img_room01_01.jpg" />
+										</div>
+									</a>
+									<div class="p_content">
+										<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용</a></strong>
+										<div class="infoBox">
+											<ul>
+												<li class="ct">식사 불포함</li>
+												<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+											</ul>
+										</div>
+										<div class="priceBox">
+											<div class="grade_in">
+												<i class="label_type01 c03">
+													<a href="#" class="lCt01">골드등급</a>
+													<span class="lCt02">4.7% 할인</span>
+												</i>
+											</div>
+											<div class="price_in">
+												<del class="cost"><span class="n">408,773</span>원</del>
+												<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+											</div>
+											<div class="npay_in">
+												<span class="point">1% 적립시 285,415원</span>
+											</div>
+										</div>
+										<div class="subBox">
+											<a href="#" class="info">객실정보</a>
+										</div>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="p_item">
+									<a href="#" class="thumbBox">
+										<div class="inner">
+											<span class="label">네이버에서 확인한 가격</span>
+											<img src="../temp/img_room01_01.jpg" />
+										</div>
+									</a>
+									<div class="p_content">
+										<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용 + 피트니스센터 무료이용</a></strong>
+										<div class="infoBox">
+											<ul>
+												<li class="ct">식사 불포함</li>
+												<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+											</ul>
+										</div>
+										<div class="priceBox">
+											<div class="grade_in">
+												<i class="label_type01 c04">
+													<span class="lCt01">항공권구매 쿠폰할인</span>
+													<span class="lCt02">4.7% 할인</span>
+												</i>
+											</div>
+											<div class="price_in">
+												<del class="cost"><span class="n">408,773</span>원</del>
+												<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+											</div>
+											<div class="npay_in">
+												<!-- s: passport -->
+												<div class="passport">
+													<button type="button" class="btn"><img src="../images/ico_passport01.png" /></button> <!-- 230126 수정 -->
+													<div class="tooltip">
+														네이버 항공권/호텔 스탬프<br />
+														GREEN PASSPORT 대상 요금입니다.
+													</div>
+												</div>
+												<!-- e: passport -->
+												<span class="point">1% 적립시 285,415원</span>
+											</div>
+										</div>
+										<div class="subBox">
+											<a href="#" class="info">객실정보</a>
+										</div>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="p_item">
+									<a href="#" class="thumbBox">
+										<div class="inner">
+											<img src="../temp/img_room01_01.jpg" />
+										</div>
+									</a>
+									<div class="p_content">
+										<strong class="prdTitle"><a href="#">스탠다드 트윈 빌리지뷰</a></strong>
+										<div class="infoBox">
+											<ul>
+												<li class="ct">식사 불포함</li>
+												<li class="ct">무료취소 2022. 11.25 17:50 까지 (한국시간 기준)</li>
+											</ul>
+										</div>
+										<div class="priceBox">
+											<div class="grade_in">
+												<i class="label_type01 c05">
+													<span class="lCt01">이벤트특가</span>
+													<span class="lCt02">4.7% 할인</span>
+												</i>
+											</div>
+											<div class="price_in">
+												<del class="cost"><span class="n">408,773</span>원</del>
+												<button type="button" class="won"><strong class="n">389,308</strong>원</button>
+											</div>
+											<div class="npay_in">
+												<span class="point">1% 적립시 285,415원</span>
+											</div>
+										</div>
+										<div class="subBox">
+											<a href="#" class="info">객실정보</a>
+										</div>
+									</div>
+								</div>
+								<!-- e: item -->
+							</div>
+						</article>
+						<!-- e: productList -->
+						<!-- s: 호텔정보 -->
+						<section class="content_section hotelInfo" id="hotelInfoSection"> <!-- 230314 클래스명 수정 -->
+							<!-- s: header -->
+							<div class="header_type01">
+								<h4 class="title">호텔 정보</h4>
+							</div>
+							<!-- e: header -->
+							<!-- s: itemList -->
+							<div class="itemList_type01">
+								<ul>
+									<!-- s: item -->
+									<li class="i_item">
+										<h5 class="i_title">위치</h5>
+										<p class="i_content">서울(강남)에 위치한 신라스테이 삼성에 머무실 경우 5분 정도 걸으면 SMTOWN 코엑스아티움 및 코엑스에 가실 수 있습니다. 이 호텔에서 봉은사까지는 0.8km 떨어져 있으며, 0.8km 거리에는 스타필드 코엑스몰도 있습니다</p>
+									</li>
+									<!-- e: item -->
+									<!-- s: item -->
+									<li class="i_item">
+										<h5 class="i_title">편의시설</h5>
+										<p class="i_content">피트니스 센터 같은 레크리에이션 시설을 이용하거나 루프탑 테라스에서 전망을 즐기실 수 있습니다. 이 호텔에는 이 밖에도 무료 무선 인터넷 및 벽난로(로비)도 마련되어 있습니다.</p>
+									</li>
+									<!-- e: item -->
+									<!-- s: item -->
+									<li class="i_item">
+										<h5 class="i_title">식사</h5>
+										<p class="i_content">호텔에 있는 레스토랑 Cafe에 들러 점심 식사, 저녁 식사를 즐겨보세요. 커피숍/카페에서는 스낵이 제공됩니다. 바/라운지에서는 음료를 마시며 하루를 여유롭게 마무리하실 수 있어요. 아침 식사(뷔페)가 주중 06:30 ~ 09:30에 유료로 제공됩니다.</p>
+									</li>
+									<!-- e: item -->
+									<!-- s: item -->
+									<li class="i_item">
+										<h5 class="i_title">업무 편의시설</h5>
+										<p class="i_content">대표적인 편의 시설과 서비스로는 무료 유선 인터넷, 24시간 운영 비즈니스 센터, 24시간 운영되는 프런트 데스크 등이 있습니다. 이 호텔에는 행사를 위한 2개의 회의실이 마련되어 있습니다. 시설 내에서 셀프 주차(요금 별도) 이용이 가능합니다.</p>
+									</li>
+									<!-- e: item -->
+									<!-- s: item -->
+									<li class="i_item">
+										<h5 class="i_title">객실</h5>
+										<p class="i_content">에어컨이 설치된 309개의 객실에서 편하게 머무실 수 있습니다. 침대에는 오리/거위털 이불 및 고급 침구 등이 갖추어져 있습니다. 무료 유선 및 무선 인터넷이 지원됩니다. 욕실에는 고급 세면용품 및 비데도 마련되어 있습니다.</p>
+									</li>
+									<!-- e: item -->
+								</ul>
+							</div>
+							<!-- e: itemList -->
+						</section>
+						<!-- e: 호텔정보 -->
+						<!-- s: 편의시설 -->
+						<section class="content_section cvs">
+							<!-- s: header -->
+							<div class="header_type01">
+								<h4 class="title">편의시설</h4>
+							</div>
+							<!-- e: header -->
+							<!-- s: itemList -->
+							<div class="itemList_type03">
+								<!-- To.개발:
+									01	와이너리
+									02	야외 활동
+									03	공항 교통편
+									04	비치
+									05	자전거 친화
+									06	스키와 스노우보딩
+									07	아침식사
+									08	건물
+									09	비즈니스
+									10	고객 편의시설 및 서비스
+									11	체크인 체크아웃
+									12	스파
+									13	다이닝
+									14	친환경
+									15	엔터테인먼트
+									16	가족 여행 편의 시설
+									17	피트니스 센터
+									18	스포츠
+									19	골프
+									20	인터넷
+									21	야외
+									22	주차
+									22	반려동물
+									23	기타 교통편
+									25	수영장
+									26	로맨틱
+									27	료칸 시설
+									28	사파리와 게임
+									29	쇼핑
+									30	장애인 편의 시설
+								-->
+								<!-- s: item -->
+								<div class="i_item">
+									<strong class="i_title ic01">와이너리</strong>
+									<div class="i_list">
+										<ul>
+											<li>장애인 편의 시설</li>
+											<li>셔틀버스</li>
+											<li>회의실</li>
+											<li>세탁시설</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="i_item">
+									<strong class="i_title ic02">야외 활동</strong>
+									<div class="i_list">
+										<ul>
+											<li>장애인 편의 시설</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="i_item">
+									<strong class="i_title ic10">고객 편의시설 및 서비스</strong>
+									<div class="i_list">
+										<ul>
+											<li>장애인 편의 시설</li>
+											<li>셔틀버스</li>
+											<li>회의실</li>
+											<li>셔틀버스</li>
+											<li>회의실</li>
+											<li>세탁시설</li>
+											<li>회의실</li>
+											<li>셔틀버스</li>
+											<li>회의실</li>
+											<li>세탁시설</li>
+										</ul>
+									</div>
+								</div>
+								<!-- e: item -->
+								<!-- s: item -->
+								<div class="i_item">
+									<strong class="i_title ic30">장애인 편의 시설</strong>
+									<ul class="i_list">
+										<li>장애인 편의 시설</li>
+										<li>셔틀버스</li>
+										<li>회의실</li>
+										<li>세탁시설</li>
+									</ul>
+								</div>
+								<!-- e: item -->
+							</div>
+							<!-- e: itemList -->
+						</section>
+						<!-- e: 편의시설 -->
+						<!-- s: 이용후기 -->
+						<section class="content_section review">
+							<!-- s: header -->
+							<div class="header_type01">
+								<h4 class="title">이용후기</h4>
+							</div>
+							<!-- e: header -->
+							<div class="section_inner">
+								<!-- s: 리뷰 -->
+								<div class="reivew_type01">
+									<div class="gradeBox">
+										<i class="grade"><strong class="n">4.5</strong>/5</i>
+									</div>
+									<span class="totalNum">후기 1033개</span>
+									<div class="r_content">
+										<ul>
+											<!-- s: item -->
+											<li class="r_item">
+												<span class="tit">청결상태</span>
+												<div class="ct">
+													<i class="bar"><span class="in" style="width:80%"></span></i>
+													<span class="n">4.5</span>
+												</div>
+											</li>
+											<!-- e: item -->
+											<!-- s: item -->
+											<li class="r_item">
+												<span class="tit">직원 서비스</span>
+												<div class="ct">
+													<i class="bar"><span class="in" style="width:60%"></span></i>
+													<span class="n">4.5</span>
+												</div>
+											</li>
+											<!-- e: item -->
+											<!-- s: item -->
+											<li class="r_item">
+												<span class="tit">숙박 시설 상태</span>
+												<div class="ct">
+													<i class="bar"><span class="in" style="width:50%"></span></i>
+													<span class="n">4.5</span>
+												</div>
+											</li>
+											<!-- e: item -->
+											<!-- s: item -->
+											<li class="r_item">
+												<span class="tit">위치</span>
+												<div class="ct">
+													<i class="bar"><span class="in" style="width:90%"></span></i>
+													<span class="n">4.5</span>
+												</div>
+											</li>
+											<!-- e: item -->
+										</ul>
+									</div>
+								</div>
+								<!-- e: 리뷰 -->
+								<!-- s: 리뷰 -->
+								<div class="reivew_type02">
+									<!-- s: item -->
+									<div class="r_item">
+										<em class="logo"><img src="../temp/img_logo01_01.png" align="호텔스닷컴" /></em>
+										<span class="date">2023.03.11</span>
+										<div class="gradeBox">
+											<!-- To.개발:
+												1점		: class="grade_type02 star1"
+												1.5점	: class="grade_type02 star1_5"
+												2점		: class="grade_type02 star2"
+												2.5점	: class="grade_type02 star2_5"
+												3점		: class="grade_type02 star3"
+												3.5점	: class="grade_type02 star3_5"
+												4점		: class="grade_type02 star4"
+												4.5점	: class="grade_type02 star4_5"
+												5점		: class="grade_type02 star5"
+											-->
+											<div class="grade_type02">
+												<i class="star">
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic half">0.5점</span>
+													<span class="ic zero">0점</span>
+												</i>
+												<span class="n"><strong>4</strong> / 5</span>
+											</div>
+										</div>
+										<p class="r_content">모든 서비스가 최고였던 호텔입니다. 시설도 주위풍경도 더할수 없이 좋았습니다. 아침부페도 정말 훌륭했습니다. 다만 저녁식사는 조금 아쉬웠네요. 모든 서비스가 최고였던 호텔입니다. 시설도 주위풍경도 더할수 없이 좋았습니다. 다만 저녁식사는 조금 아쉬웠네요. 시설도 주위풍경도 더할수 없이 좋았습니다. 다만 저녁식사는 조금 아쉬웠네요. 모든 서비스가 최고였던 호텔입니다. 시설도 주위풍경도 더할수 없이 좋았습니다. 아침부페도 정말 훌륭했습니다.</p>
+										<div class="subBox">
+											<button type="button" class="btnOpen">더보기</button>
+										</div>
+									</div>
+									<!-- e: item -->
+									<!-- s: item -->
+									<div class="r_item open">
+										<em class="logo"><img src="../temp/img_logo01_02.png" align="익스피디아" /></em>
+										<span class="date">2023.03.11</span>
+										<div class="gradeBox">
+											<!-- To.개발:
+												1점		: class="grade_type02 star1"
+												1.5점	: class="grade_type02 star1_5"
+												2점		: class="grade_type02 star2"
+												2.5점	: class="grade_type02 star2_5"
+												3점		: class="grade_type02 star3"
+												3.5점	: class="grade_type02 star3_5"
+												4점		: class="grade_type02 star4"
+												4.5점	: class="grade_type02 star4_5"
+												5점		: class="grade_type02 star5"
+											-->
+											<div class="grade_type02">
+												<i class="star">
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic half">0.5점</span>
+													<span class="ic zero">0점</span>
+												</i>
+												<span class="n"><strong>4</strong> / 5</span>
+											</div>
+										</div>
+										<p class="r_content">멋진 시설, 훌륭한 식사, 조금은 부족한 서비스 할레쿨라니 sunset wing</p>
+									</div>
+									<!-- e: item -->
+									<!-- s: item -->
+									<div class="r_item">
+										<em class="logo"><img src="../temp/img_logo01_03.png" align="Vrbo" /></em>
+										<span class="date">2023.03.11</span>
+										<div class="gradeBox">
+											<!-- To.개발:
+												1점		: class="grade_type02 star1"
+												1.5점	: class="grade_type02 star1_5"
+												2점		: class="grade_type02 star2"
+												2.5점	: class="grade_type02 star2_5"
+												3점		: class="grade_type02 star3"
+												3.5점	: class="grade_type02 star3_5"
+												4점		: class="grade_type02 star4"
+												4.5점	: class="grade_type02 star4_5"
+												5점		: class="grade_type02 star5"
+											-->
+											<div class="grade_type02">
+												<i class="star">
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic">1점</span>
+													<span class="ic half">0.5점</span>
+													<span class="ic zero">0점</span>
+												</i>
+												<span class="n"><strong>4</strong> / 5</span>
+											</div>
+										</div>
+										<p class="r_content">
+											최고의 여행<br />
+											한마디로 최고였습니다!
+										</p>
+									</div>
+									<!-- e: item -->
+									<p class="notiBox">※ 제휴사에서 제공한 이용 후기 및 평점은 개별 여행자의 주관적인 의견이며 트립토파즈의 입장을 반영하지 않습니다.</p>
+								</div>
+								<!-- e: 리뷰 -->
+								<!-- s: pageNavigation -->
+								<div class="pageNavi_type01">
+									<a href="#" class="btn prev">이전 페이지</a>
+									<a href="#" class="page">1</a>
+									<a href="#" class="page">2</a>
+									<strong class="page">3</strong>
+									<a href="#" class="page">4</a>
+									<a href="#" class="page">5</a>
+									<a href="#" class="btn next">다음 페이지</a>
+								</div>
+								<!-- e: pageNavigation -->
+								<div class="btn_wrap">
+									<a href="#" class="btn_type03 h01 c01">제휴사 후기 더보기</a>
+								</div>
+							</div>
+						</section>
+						<!-- e: 이용후기 -->
+						<!-- s: 인기호텔 -->
+						<section class="content_section best">
+							<!-- s: header -->
+							<div class="header_type01">
+								<h4 class="title">인기호텔</h4>
+							</div>
+							<!-- e: header -->
+							<!-- s: itemList -->  
+							<div class="itemList_type02" id="_bestViewer">
+								<!-- s: swiper -->
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- s: item -->
+										<div class="swiper-slide p_item">
+											<a href="#">
+												<div class="thumb"><img src="../temp/img_room03_01.png" /></div>
+												<div class="p_inner">
+													<strong class="prdTitle">신라호텔서울</strong>
+													<div class="subBox">
+														<span class="in">서울특별시</span>
+														<span class="in">5성급</span>
+													</div>
+													<div class="priceBox">
+														<strong class="price">427,000원~</strong>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- e: item -->
+										<!-- s: item -->
+										<div class="swiper-slide p_item">
+											<a href="#">
+												<div class="thumb"><img src="../temp/img_room03_01.png" /></div>
+												<div class="p_inner">
+													<strong class="prdTitle">신라호텔서울</strong>
+													<div class="subBox">
+														<span class="in">서울특별시</span>
+														<span class="in">5성급</span>
+													</div>
+													<div class="priceBox">
+														<strong class="price">427,000원~</strong>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- e: item -->
+										<!-- s: item -->
+										<div class="swiper-slide p_item">
+											<a href="#">
+												<div class="thumb"><img src="../temp/img_room03_01.png" /></div>
+												<div class="p_inner">
+													<strong class="prdTitle">신라호텔서울</strong>
+													<div class="subBox">
+														<span class="in">서울특별시</span>
+														<span class="in">5성급</span>
+													</div>
+													<div class="priceBox">
+														<strong class="price">427,000원~</strong>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- e: item -->
+										<!-- s: item -->
+										<div class="swiper-slide p_item">
+											<a href="#">
+												<div class="thumb"><img src="../temp/img_room03_01.png" /></div>
+												<div class="p_inner">
+													<strong class="prdTitle">신라호텔서울</strong>
+													<div class="subBox">
+														<span class="in">서울특별시</span>
+														<span class="in">5성급</span>
+													</div>
+													<div class="priceBox">
+														<strong class="price">427,000원~</strong>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- e: item -->
+										<!-- s: item -->
+										<div class="swiper-slide p_item">
+											<a href="#">
+												<div class="thumb"><img src="../temp/img_room03_01.png" /></div>
+												<div class="p_inner">
+													<strong class="prdTitle">신라호텔서울</strong>
+													<div class="subBox">
+														<span class="in">서울특별시</span>
+														<span class="in">5성급</span>
+													</div>
+													<div class="priceBox">
+														<strong class="price">427,000원~</strong>
+													</div>
+												</div>
+											</a>
+										</div>
+										<!-- e: item -->
+									</div>
+								</div>
+								<div class="swiper-button swiper-button-prev"></div>
+								<div class="swiper-button swiper-button-next"></div>
+								<!-- e: swiper -->
+								<script type="text/javascript">
+									$(function(){
+										var bestViewer = new Swiper('#_bestViewer .swiper-container', _swiperOption.bestViewer('#_bestViewer .swiper-container') );
+									});
+								</script>
+							</div>
+							<!-- e: itemList -->
+						</section>
+						<!-- e: 인기호텔 -->
+						<a href="#mainContent" class="btn_topGo fixed">페이지 최상단으로 이동</a>
+						<!-- <a href="#" class="btn_floatMore">더 많은 호텔<br />보러가기</a> -->
+					</div>
+					<!-- e: mainContent -->
+				</div>
+
+				<!-- s: 숙박페스타쿠폰 230519 -->
+				<button type="button" class="salefesta_coupon">
+					<div class="header_inner">
+						“김창주”님의 숙박페스타 할인쿠폰<br />
+						대상 지역: 부산광역시
+					</div>
+					<div class="content_inner">
+						<div class="couponBox cp01">50,000원 (7만원 초과 숙박 시)</div>
+						<!-- To.개발:
+							5만원	: <div class="couponBox cp01">50,000원 (7만원 이상 국내 숙박상품 예약 시 할인)</div>
+							3만원	: <div class="couponBox cp02">30,000원 (7만원 이상 국내 숙박상품 예약 시 할인)</div>
+							2만원	: <div class="couponBox cp03">20,000원 (7만원 미만 국내 숙박상품 예약 시 할인)</div>
+						-->
+						<p class="txtBox">※ 발급 신청하신 지역/도에 한하여 사용 가능합니다.</p>
+					</div>
+				</button>
+				<script type="text/javascript">
+					$(function(){
+						_SECRETMALL_.toggleOpen.oneself('.salefesta_coupon');
+					});
+				</script>
+				<!-- e: 숙박페스타쿠폰 230519 -->
+
+
+
+			</main>
+		</div>
+		<!-- e: BODY -->
+
+		<!-- s: FOOTER -->
+		<footer class="footer_container">
+			<div class="footer_inner">
+
+				footer
+
+			</div>
+		</footer>
+		<!-- e: FOOTER -->
+
+	</div>
+
+
+	<!-- 240508 추가 : Line Banner ------------------------------------
+
+		Banner 활성화 : --active 클래스 추가 
+		<section class="line-banner-container --active">
+
+	------------------------------------------------------------------>
+	<section class="line-banner-container priceLineBanner --active">
+		<div class="line-banner">
+			<div class="line-banner__text">
+				<div>5, 6월 투숙객 최대 9% 적립 프로모션!</div>
+				<div class="sm">KB국민/삼성/롯데/NH농협카드 N페이 간편결제 시</div>
+			</div>
+			<button class="line-banner__close pop-close" aria-label="닫기" onclick="popClose('.priceLineBanner')"></button>
+		</div>
+	</section>
+	<!-- /240508 추가 : Line Banner -->
+</body>
+</html>

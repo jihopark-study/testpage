@@ -1,0 +1,1161 @@
+@charset 'utf-8';
+
+
+
+
+
+/******************************
+***
+***	00 로그인
+***
+******************************/
+
+	body.login_page {background:#b6b6b6;}
+
+	.login_container {height:100%;}
+	.login_container .login_inner {width:900px; height:100%; position:relative; box-sizing:border-box; margin:0 auto;color:#fff; text-align:center; overflow:hidden; background:#000 center center no-repeat; background-size:auto 200%; animation-name:loginBgMotion; animation-duration:8s;}
+	.login_container .logo {position:absolute; left:50%; top:58px; width:84px; margin-left:-42px; padding-top:15px; height:0; overflow:hidden; background:url('../images/logo_triptopaz01.png') 0 0 no-repeat; background-size:100% 100%;}
+	.login_container .content_wrap {position:absolute; left:0; right:0; top:24.647%;}
+	.login_container .content_wrap .descTxt {font-size:24px; font-weight:700; margin-bottom:21px;}
+	.login_container .content_wrap .title {width:350px; padding-top:47px; height:0; overflow:hidden; background:url('../images/logo_secretmall01.png') 0 0 no-repeat; background-size:100% 100%; margin:0 auto;}
+	.login_container .membership_wrap {position:absolute; left:50%; margin-left:-125px; bottom:30.516%; display:flex; justify-content:center; align-items:center; width:250px; height:110px; background:rgba(0,0,0,0.5); border-radius:30px; text-align:center; line-height:1.5; font-size:15px; color:#fff;}
+	.login_container .membership_wrap.type2{margin-bottom: 118px;}
+	.login_container .membership_wrap.type2 span{display: block;font-size: 12px;}
+	.login_container .membership_wrap .npay {display:inline-block; vertical-align:middle; position:relative; top:-1px; width:55px; height:16px; color:transparent; text-indent:-999px; background:url('../images/logo_npay_new_02.svg') 0 0 no-repeat; background-size:100% 100%;}
+	.login_container .btn_wrap {position:absolute; left:0; right:0; bottom:15.962%;}
+	.login_container .btn_wrap .btnLogin {display:block; width:250px; padding-top:54px; height:0; overflow:hidden; background:url('../images/btn_login_naver01.png') 0 0 no-repeat; background-size:100% 100%; margin:0 auto;}
+
+	/* Mobile */
+	@media (max-width:980px){
+		.login_container .login_inner {width:auto;}
+		.login_container .logo {}
+		.login_container .content_wrap {top:22.3%;}
+		.login_container .content_wrap .descTxt {font-size:18px;}
+		.login_container .content_wrap .title {width:247px; padding-top:34px; background-image:url('../images/logo_secretmall01_m.png');}
+		.login_container .membership_wrap {bottom:26.995%;}
+		.login_container .btn_wrap {bottom:12.91%;}
+		.login_container .btn_wrap .btnLogin {width:231px; padding-top:50px; background-image:url('../images/btn_login_naver01_m.png');}
+	}
+
+       @keyframes loginBgMotion {
+        0%   {opacity:0.1; background-position-x:-200px;}
+        100% {opacity:1; background-position-x:center;}
+      }
+
+
+
+
+
+
+/******************************
+***
+***	00 공통
+***
+******************************/
+
+	/* 약관 */
+	body.lawPage .body_container {background:#fff;}
+
+
+	/* 회사소개 */
+	body.companyPage .body_container {background:#fff;}
+
+
+	/* 공통오류 */
+	body.errorPage {background:#fff;}
+	.error_container {height:100%; display:flex; justify-content:center; align-items:center; text-align:center;}
+	.error_container .title {font-size:64px; font-weight:900; color:#03c75a;}
+	.error_container .descTxt {font-size:14px; color:#858585; margin-top:10px; line-height:1.5;}
+	.error_container .btn_wrap {margin-top:30px;}
+	.error_container .btn_wrap .btn {display:inline-block; vertical-align:middle; width:100px; height:42px; box-sizing:border-box; background:#03c75a; color:#fff; font-size:14px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.2); border-radius:3px;}
+
+	/* 예악정보연동안내 */
+	.interlock_page {background:#fff;}
+	.interlock_page .body_inner {}
+	/* Mobile */
+	@media (max-width:980px){
+		.interlock_page .body_inner {}
+	}
+
+
+	/* 처리결과 */
+	.result_page {background:#fff;}
+	.result_page .body_inner {}
+	/* Mobile */
+	@media (max-width:980px){
+		.result_page .body_inner {}
+	}
+
+	/* 처리결과 > 예약완료 */
+	.result_page.reserv_complete {background:none;}
+	.result_page.reserv_complete .result_type01.bg02{background-color: #fff;border-radius: 5px 5px 0 0;}
+
+	/* Mobile */
+	@media (max-width:980px){
+		.result_page.reserv_complete {background:#fff;}
+		.result_page.reserv_complete .result_type01.bg02{background-color: initial;border-radius: 0;}
+		.result_page.reserv_complete .toggle-wrapper{border-top: 1px solid #e2e2e2;}
+	}
+
+
+	/* 마케팅수신동의 */
+
+	.marketing_page .body_inner{background-color: #fff;}
+
+
+/******************************
+***
+***	01 요금리스트
+***
+******************************/
+
+	.chargeList_page {}
+	.chargeList_page .body_inner {padding-bottom:100px;}
+
+	.chargeList_page .roomViewer_contenet {position:relative; padding-right:148px; margin-top:9px;}
+	.chargeList_page .roomViewer_contenet .viewer_type01 {}
+	.chargeList_page .roomViewer_contenet .more_inner {position:absolute; right:0; top:0; width:140px;}
+	.chargeList_page .roomViewer_contenet .more_inner li {position:relative;}
+	.chargeList_page .roomViewer_contenet .more_inner li + li {margin-top:8px;}
+	.chargeList_page .roomViewer_contenet .more_inner li a {display:block; height:94px; border-radius:8px; overflow:hidden; overflow:hidden; position:relative;}
+	.chargeList_page .roomViewer_contenet .more_inner li img {width:100%; min-height:100%;}
+	.chargeList_page .roomViewer_contenet .more_inner li:nth-child(4) a::before {content:''; position:absolute; left:0; right:0; top:0; bottom:0; background:rgba(0,0,0,0.5);}
+	.chargeList_page .roomViewer_contenet .more_inner li .n {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); color:#fff; font-size:12px; padding-left:25px;}
+	.chargeList_page .roomViewer_contenet .more_inner li .n::before {content:''; position:absolute; left:0; top:50%; width:24px; height:24px; margin-top:-12px; background:url('../images/ico_camera01.png') 0 0 no-repeat;}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .body_inner {padding-bottom:80px;}
+		.chargeList_page .roomViewer_contenet {padding-right:0;}
+		.chargeList_page .roomViewer_contenet .viewer_type01 {}
+		.chargeList_page .roomViewer_contenet .more_inner {display:none;}
+	}
+
+	.chargeList_page .mainTab_content {margin-top:15px; position:sticky; left:0; right:0; top:0; z-index:2000; background:#f5f7fa;}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .mainTab_content {margin-top:0; background:#fff;}
+	}
+
+
+	.chargeList_page .summary_content {background:#fff; border-radius:10px; padding:32px 32px 25px; position:relative; margin-top:10px;}
+	.chargeList_page .summary_content .titleBox {}
+	.chargeList_page .summary_content .titleBox .prdTitle {display:inline-block; vertical-align:middle; font-size:22px; font-weight:800; color:#000;}
+	.chargeList_page .summary_content .titleBox .npay {display:inline-block; vertical-align:middle; margin-left:8px; width:41px; padding-top:15px; height:0; overflow:hidden; background:url('../images/logo_npay_new_01.svg') 0 0 no-repeat; background-size:100% 100%;}
+	.chargeList_page .summary_content .subTitle {display:block; margin-top:5px; font-weight:700; font-size:18px; color:#000;}
+	.chargeList_page .summary_content .infoBox {margin-top:18px; font-size:0; padding-right:90px;}
+	.chargeList_page .summary_content .infoBox .grade_type01 {}
+	.chargeList_page .summary_content .infoBox .address {display:inline-block; vertical-align:middle; padding-left:12px; margin-left:10px; position:relative; font-size:13px; color:#858585;}
+	.chargeList_page .summary_content .infoBox .address::before {content:''; position:absolute; left:0; top:50%; width:2px; height:2px; border-radius:50%; margin-top:-1px; background:#242424;}
+	.chargeList_page .summary_content .rtBox {position:absolute; right:25px; top:25px;}
+	.chargeList_page .summary_content .rbBox {position:absolute; right:32px; bottom:23px;}
+	.chargeList_page .summary_content .btnWindow {display:inline-block; vertical-align:middle; width:30px; height:30px; color:transparent; text-indent:-9999px; overflow:hidden; background:url('../images/ico_window01.png') center center no-repeat; background-size:15px auto;}
+	.chargeList_page .summary_content .btnInfo {display:inline-block; vertical-align:middle; border:1px solid #e2e2e2; border-radius:12px; height:26px; line-height:24px; box-sizing:border-box; padding:0 18px 0 10px; font-size:14px; color:#858585; position:relative;}
+	.chargeList_page .summary_content .btnInfo::after {content:''; position:absolute; right:9px; top:50%; width:4px; height:7px; margin-top:-4px; background:url('../images/ico_arrow_r01.png') 0 0 no-repeat; background-size:100% 100%;}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .summary_content {border-radius:0; padding:26px; margin-top:0; border-bottom:1px solid #e2e2e2;}
+		.chargeList_page .summary_content .titleBox {}
+		.chargeList_page .summary_content .titleBox .prdTitle {}
+		.chargeList_page .summary_content .titleBox .npay {}
+		.chargeList_page .summary_content .subTitle {}
+		.chargeList_page .summary_content .infoBox {margin-top:15px;}
+		.chargeList_page .summary_content .infoBox .grade {display:block;}
+		.chargeList_page .summary_content .infoBox .address {display:block; padding-left:0; margin:6px 0 0;}
+		.chargeList_page .summary_content .infoBox .address::before {content:normal;}
+		.chargeList_page .summary_content .rtBox {right:26px; top:26px;}
+		.chargeList_page .summary_content .rbBox {right:26px; bottom:24px;}
+		.chargeList_page .summary_content .btnWindow {}
+		.chargeList_page .summary_content .btnInfo {}
+		.chargeList_page .summary_content .btnInfo::after {}
+	}
+
+
+
+	.chargeList_page .notice_content {background:#fff; border-radius:10px; padding:25px 32px; position:relative; margin-top:10px;}
+	.chargeList_page .notice_content .title {font-size:16px; color:#03c75a; font-weight:700;}
+	.chargeList_page .notice_content .cont {font-size:13px; color:#707070; line-height:1.6; margin-top:10px;}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .notice_content {border-radius:0; padding:26px; margin-top:0; border-bottom:1px solid #e2e2e2;}
+		.chargeList_page .notice_content .title {}
+		.chargeList_page .notice_content .cont {}
+	}
+
+
+
+	.chargeList_page .detail_content {margin-top:10px;}
+	.chargeList_page .detail_content::after {content:''; display:block; clear:both;}
+	.chargeList_page .detail_content .filter_inner {float:left; width:286px; box-sizing:border-box; /*position:sticky; left:0; top:51px;*/ }
+	.chargeList_page .detail_content .filter_inner .sidebar_inner {background:#fff; border-radius:10px; padding:28px; position:relative; box-sizing:border-box;z-index:1000;}
+	.chargeList_page .detail_content .mainContent_inner {float:right; width:605px; position:relative;}
+	.chargeList_page .detail_content .mainContent_inner .loading_section {height:400px; position:relative;}
+	.chargeList_page .detail_content .mainContent_inner .noticeTxt_type02 {margin-bottom:10px;}
+	.chargeList_page .detail_content .mainContent_inner .content_section {background:#fff; border-radius:10px; margin-top:16px;}
+	.chargeList_page .detail_content .mainContent_inner .content_section.hotelInfo {}
+	.chargeList_page .detail_content .mainContent_inner .content_section.hotelInfo .itemList_type01 {padding:16px 24px 35px;}
+	.chargeList_page .detail_content .mainContent_inner .content_section.review {}
+	.chargeList_page .detail_content .mainContent_inner .content_section.review .section_inner {padding:20px 24px 35px;}
+	.chargeList_page .detail_content .mainContent_inner .content_section.review .reivew_type02 {margin-top:20px;}
+	.chargeList_page .detail_content .mainContent_inner .content_section.review .pageNavi_type01 {margin-top:30px;}
+	.chargeList_page .detail_content .mainContent_inner .salefesta_section {margin-bottom:10px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section {background:rgba(0,196,213,0.1); border-radius:10px; position:relative; padding:64px 24px 26px; margin-bottom:10px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .recmd_title {position:absolute; left:0; top:0; border-radius:10px 0 0 0; background:#00c4d5; color:#fff; text-align:center; width:150px; height:40px; line-height:40px; font-size:14px; font-weight:700;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner {}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner .item_title {color:#00c4d5; font-size:17px; font-weight:800; margin-bottom:12px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner ~ .section_inner {margin-top:32px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .btn_inner {text-align:center; margin-top:26px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .btn_inner .btnMore {font-size:14px; font-weight:700; color:#000; position:relative; padding-right:20px;}
+	.chargeList_page .detail_content .mainContent_inner .recmd_section .btn_inner .btnMore::after {content:''; position:absolute; right:0; top:50%; width:10px; height:6px; margin-top:-3px; background:url('../images/ico_arrow_b01.png') 0 0 no-repeat; background-size:100% 100%;}
+	/* PC */
+	@media (min-width:981px){
+		.chargeList_page .detail_content {}
+		.chargeList_page .detail_content .filter_inner .sidebar_inner {transform:translate(0,0); transform:translate3d(0,0,0); will-change:position, transform; width:286px !important;}
+		.chargeList_page .detail_content .filter_inner .search_type01 {}
+		.chargeList_page .detail_content .filter_inner .btn_wrap {margin-top:10px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap {}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in {display:none;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title {}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner {margin-top:30px; padding-top:30px; border-top:1px dashed #bcbcbc;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner .title {color:#00c4d5; font-size:14px; font-weight:bold; margin-bottom:15px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner li + li {margin-top:10px;}
+		.chargeList_page .detail_content .mainContent_inner .content_section.review .btn_wrap {display:none;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .detail_content {margin-top:0;}
+		.chargeList_page .detail_content::after {}
+		.chargeList_page .detail_content .filter_inner {float:none; width:auto;}
+		.chargeList_page .detail_content .filter_inner .sidebar_inner {border-radius:0; padding:0; position:static;}
+		.chargeList_page .detail_content .filter_inner .search_type01 {}
+		.chargeList_page .detail_content .filter_inner .btn_wrap {display:none;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap {}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in {padding:18px 24px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title {display:inline-block; vertical-align:middle; position:relative; padding:0 25px 0 12px; height:36px; font-size:14px; color:#424242; border:1px solid #e9e9e9; border-radius:999px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title::before {content:''; position:absolute; right:10px; top:50%; width:10px; height:6px; margin-top:-3px; background:url('../images/btn_control13.png') 0 0 no-repeat; background-size:100% auto;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title ~ .title {margin-left:4px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title.on {border-color:#00c4d5; color:#00c4d5; font-weight:bold;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title.on::before {background-position-y:-6px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .header_in .title.on::after {content:''; position:absolute; left:50%; top:100%; margin:14px 0 0 -6px; width:12px; height:12px; background:#eff3f5; transform:rotate(45deg);}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner {font-size:0; background:#eff3f5; padding:17px 24px; display:none; position:relative;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner .title {display:none;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner ul {margin:-8px 0 0 -6px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner li {display:inline-block; vertical-align:middle; margin:8px 0 0 6px;}
+		.chargeList_page .detail_content .filter_inner .filter_wrap .inner.on {display:block;}
+		.chargeList_page .detail_content .filter_inner.fixed {}
+		.chargeList_page .detail_content .filter_inner.fixed .sidebar_inner {padding-top:63px; position:static !important; width:auto !important; transform:none !important;}
+		.chargeList_page .detail_content .filter_inner.fixed .search_type01 {position:fixed; left:0; right:0; top:51px; z-index:1000;}
+		.chargeList_page .detail_content .mainContent_inner {float:none; width:auto;}
+		.chargeList_page .detail_content .mainContent_inner .noticeTxt_type02 {margin-bottom:0;}
+		.chargeList_page .detail_content .mainContent_inner .content_section {margin-top:10px; border-radius:0;}
+		.chargeList_page .detail_content .mainContent_inner .content_section.hotelInfo .itemList_type01 {/*padding:22px 24px 120px;*/ padding:22px 24px;}
+		.chargeList_page .detail_content .mainContent_inner .content_section.review {}
+		.chargeList_page .detail_content .mainContent_inner .content_section.review .section_inner {padding:20px 20px 28px;}
+		.chargeList_page .detail_content .mainContent_inner .content_section.review .reivew_type02,
+		.chargeList_page .detail_content .mainContent_inner .content_section.review .pageNavi_type01 {display:none;}
+		.chargeList_page .detail_content .mainContent_inner .content_section.review .btn_wrap {margin-top:12px;}
+		.chargeList_page .detail_content .mainContent_inner .salefesta_section {padding:15px 24px;}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section {border-radius:0; padding:}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section .recmd_title {border-radius:0;}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner {}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner .item_title {}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner ~ .section_inner {}
+		.chargeList_page .detail_content .mainContent_inner .recmd_section .section_inner .prdList_type01 .p_item {border-radius:10px;}
+	}
+
+	.chargeList_page .salefesta_coupon {position:fixed; right:50%; bottom:0; width:465px; background:#FF7D64; border-radius:8px 8px 0 0; margin-right:-347px; box-sizing:border-box; color:#fff; text-align:center; z-index:8500;}
+	.chargeList_page .salefesta_coupon .header_inner {height:72px; display:flex; justify-content:center; align-items:center; font-size:19px; font-weight:bold; padding: 0 47px 0 27px; box-sizing:border-box; position:relative;}
+	.chargeList_page .salefesta_coupon .header_inner::after {content:''; position:absolute; right:45px; top:50%; transform: translateY(-50%) rotate(-180deg); width:36px; height:36px; background: url('../images/btn_control13.svg') no-repeat center / contain;}
+	.chargeList_page .salefesta_coupon .content_inner {display:none; width:395px; background: rgba(255, 255, 255, 0.80); margin:0 auto 20px; color:#000; padding-bottom: 16px; box-sizing:border-box;}
+	.chargeList_page .salefesta_coupon .content_inner .couponBox {color:transparent; text-indent:-999px; margin:0 auto;}
+	.chargeList_page .salefesta_coupon .content_inner .couponBox.cp01 {width: auto;height: 157px;background: url(../images/img_coupon5.svg) no-repeat center top 20px / auto 137px;}
+	.chargeList_page .salefesta_coupon .content_inner .couponBox.cp02 {width: auto;height: 139px;background: url(../images/img_coupon3.svg) no-repeat center top 27px / auto 112px;}
+	.chargeList_page .salefesta_coupon .content_inner .couponBox.cp03 {width: auto;height: 139px;background: url(../images/img_coupon2.svg) no-repeat center top 27px / auto 112px;}
+	.chargeList_page .salefesta_coupon .content_inner .txtBox {font-size:14px; margin-top:15px;letter-spacing: -1.5px;}
+	.chargeList_page .salefesta_coupon.open {}
+	.chargeList_page .salefesta_coupon.open .header_inner {height: 85px;}
+	.chargeList_page .salefesta_coupon.open .header_inner::after {transform: translateY(-50%) rotate(0deg);}
+	.chargeList_page .salefesta_coupon.open .content_inner {display:block;}
+	/* Mobile */
+	@media (max-width:980px){
+		.chargeList_page .salefesta_coupon {right:auto; left:50%; transform: translateX(-50%); margin:initial; width:298px;}
+		.chargeList_page .salefesta_coupon .header_inner {height:60px; font-size:15px;padding: 0 50px 0 27px;}
+		.chargeList_page .salefesta_coupon .header_inner::after {background-image: url(../images/btn_control13_m.svg);right:23px;width:27px;height:27px;}
+		.chargeList_page .salefesta_coupon .content_inner {width:auto; margin:0 12px 12px; padding-bottom:10px;}
+		.chargeList_page .salefesta_coupon .content_inner .couponBox {}
+		.chargeList_page .salefesta_coupon .content_inner .couponBox.cp01 {width: auto;height: 137px;background: url(../images/img_coupon5.svg) no-repeat center top 17px / auto 120px;}
+		.chargeList_page .salefesta_coupon .content_inner .couponBox.cp02 {width: auto;height: 108px;background: url(../images/img_coupon3.svg) no-repeat center top 18px / auto 90px;}
+		.chargeList_page .salefesta_coupon .content_inner .couponBox.cp03 {width: auto;height: 108px;background: url(../images/img_coupon2.svg) no-repeat center top 18px / auto 90px;}
+		.chargeList_page .salefesta_coupon .content_inner .txtBox {font-size:13px;}
+		.chargeList_page .salefesta_coupon.open {}
+		.chargeList_page .salefesta_coupon.open .header_inner {height: 66px;}
+		.chargeList_page .salefesta_coupon.open .header_inner::after {}
+		.chargeList_page .salefesta_coupon.open .content_inner {}
+	}
+
+	/* 240305 Mobile일 때 Swiper 네비게이션 제거 */
+	@media (max-width:980px){
+		.chargeList_page .banner_type01 .swiper-container .swiper-button{display: none;}
+	}
+
+	/* 240318 ChargeList Page Scroll Event */
+	.chargeList_page .tab_type03 .tab_inner li.on a::after{display: none;}
+	.chargeList_page .tab-slider{position: absolute;left: 0;bottom: 0;width: 0;height: 2px;background: #000;transition: left 0.3s ease;}
+
+
+
+	.hotelList_page .body_inner {padding-bottom:100px;}
+	.hotelList_page .section_inner {}
+	.hotelList_page .filter_contenet {}
+	.hotelList_page .filter_contenet .filter_inner {}
+	.hotelList_page .filter_contenet .search_type01 .calendar_container {/*top:138px;*/}
+	/* PC */
+	@media (min-width:981px){
+		.hotelList_page {}
+		.hotelList_page .section_inner {margin-top:6px;}
+		.hotelList_page .section_inner::after {content:''; display:block; clear:both;}
+		.hotelList_page .section_inner .filter_contenet {width:286px; float:left; position:sticky; left:0; top:6px; z-index:1000;}
+		.hotelList_page .section_inner .filter_contenet .filter_inner {background:#fff; border-radius:10px; padding:28px;}
+		.hotelList_page .section_inner .filter_contenet .btn_wrap {margin-top:10px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap {margin-top:32px; padding-top:25px; border-top:1px dashed #bcbcbc;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .inner {}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .inner + .inner {margin-top:30px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .tit {color:#00c4d5; font-weight:600; font-size:16px; padding-left:12px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox {margin-top:15px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox li {}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox li + li {margin-top:13px;}
+		.hotelList_page .section_inner .main_content {width:605px; float:right;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.hotelList_page {background:#fff;}
+		.hotelList_page .body_inner {padding-bottom:60px;}
+		.hotelList_page .section_inner {}
+		.hotelList_page .section_inner .filter_contenet {border-top:1px solid #e2e2e2; position:sticky; left:0; top:0; z-index:1000; background:#fff;}
+		.hotelList_page .section_inner .filter_contenet .filter_inner {}
+		.hotelList_page .section_inner .filter_contenet .btn_wrap {display:none;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap {padding:16px 20px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .inner {position:relative; padding-left:60px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .inner + .inner {margin-top:6px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .tit {color:#242424; font-weight:600; font-size:14px; position:absolute; left:0; top:0; line-height:28px;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox {font-size:0; white-space:nowrap; overflow-x:auto;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox li {display:inline-block; vertical-align:middle;}
+		.hotelList_page .section_inner .filter_contenet .filter_wrap .contBox li + li {margin-left:4px;}
+		.hotelList_page .section_inner .main_content {border-top:1px solid #f0f0f0;}
+	}
+
+
+
+
+
+
+
+
+/******************************
+***
+***	01 요금리스트			01 숙박일정
+***
+******************************/
+
+	body.chkInOutPage {}
+	body.chkInOutPage .body_container {padding-bottom:0; background:#fff;}
+
+
+
+/******************************
+***
+***	01 요금리스트			02 숙박 인원
+***
+******************************/
+
+
+	body.chkUserPage {}
+	body.chkUserPage .body_container {padding-bottom:0; background:#fff;}
+	body.chkUserPage .body_container .body_inner {padding-top:30px; padding-left:20px; padding-right:20px;}
+					
+	.chkUser_page {background:#fff;}
+	.chkUser_page .userCount_wrap {}
+	.chkUser_page .userCount_wrap .inner {display:flex; align-items:center;}
+	.chkUser_page .userCount_wrap .inner + .inner {margin-top:20px;}
+	.chkUser_page .userCount_wrap .tit {flex:1; color:#242424; font-weight:600; font-size:17px;}
+	.chkUser_page .userCount_wrap .tit .sub {display:block; color:#858585; font-size:12px; font-weight:400; margin-top:3px;}
+	.chkUser_page .userCount_wrap .countBox {flex:1; display:flex; justify-content:space-between; align-items:center;}
+	.chkUser_page .userCount_wrap .countBox .count_type01 {}
+	.chkUser_page .userCount_wrap .countBox .count_type01.de {}
+	.chkUser_page .userCount_wrap .countBox .count_type01.in {}
+	.chkUser_page .userCount_wrap .countBox .num {color:#242424; font-size:17px; font-weight:600;}
+	.chkUser_page .userAge_wrap {margin-top:50px;}
+	.chkUser_page .userAge_wrap .desc {margin-bottom:15px; color:#000; font-weight:600; font-size:15px;}
+	.chkUser_page .userAge_wrap .desc .sub {color:#858585; font-weight:400;}
+	.chkUser_page .userAge_wrap .inner {}
+	.chkUser_page .userAge_wrap .inner .inBox {position:relative; padding-right:200px;}
+	.chkUser_page .userAge_wrap .inner .inBox + .inBox {margin-top:8px;}
+	.chkUser_page .userAge_wrap .inner .inBox .tit {display:block; line-height:44px; height:44px; color:#242424; font-size:14px; padding-left:15px; position:relative;}
+	.chkUser_page .userAge_wrap .inner .inBox .tit::before {content:''; position:absolute; left:0; top:50%; width:5px; height:5px; margin-top:-2px; background:#ddd; border-radius:50%;}
+	.chkUser_page .userAge_wrap .inner .inBox .selectBox01 {position:absolute; right:0; top:0; width:180px;}
+	.chkUser_page .noticeTxt {margin-top:30px; padding-left:20px; position:relative; color:#858585; font-size:13px; line-height:1.38;}
+	.chkUser_page .noticeTxt::before {content:''; position:absolute; left:0; top:0; width:16px; height:16px; background:url('../images/ico_info01.png') 0 0 no-repeat; background-size:100% 100%;}
+
+
+
+
+
+
+
+/******************************
+***
+***	02 예약 및 결제
+***
+******************************/
+
+	body.paymentPage {}
+	body.paymentPage .body_container {padding-bottom:64px;}
+	body.paymentPage .body_container .body_inner {}
+	/* Mobile */
+	@media (max-width:980px){
+		body.paymentPage {}
+		body.paymentPage .body_container {padding-bottom:60px;}
+	}
+
+
+	.payment_page .body_inner {position:relative;}
+	.payment_page .content_section {background:#fff; border-radius:10px; box-sizing:border-box; position:relative;}
+	.payment_page .main_content {box-sizing:border-box;}
+	.payment_page .main_content .content_section .content_inner {position:relative; padding:22px 24px;}
+	.payment_page .main_content .content_section ~ .banner_type01,
+	.payment_page .main_content .content_section ~ .content_section {margin-top:10px;}
+	.payment_page .main_content .content_section .content01 {font-size:14px; line-height:1.6; word-break:break-all;}
+	.payment_page .aside_content {box-sizing:border-box;}
+	.payment_page .aside_content .content_section {border:1px solid #e2e2e2; border-radius:8px;}
+	.payment_page .aside_content .content_section .content_inner {padding:16px;}
+	.payment_page .table_type01.room_type thead th,
+	.payment_page .table_type01.room_type tbody td{height: initial;word-break: keep-all;}
+	.payment_page .table_type01.room_type thead th{padding:4px 6px;}
+	.payment_page .table_type01.room_type tbody td{padding:8px 6px;}
+	/* PC */
+	@media (min-width:981px){
+		.payment_page .body_inner {display:flex; justify-content:space-between; padding:10px 340px 30px 0; padding-right:0;}
+		.payment_page .main_content {width:560px;}
+		.payment_page .main_content .aside_content {display:none;}
+		.payment_page .aside_content {/*position:absolute; right:0; top:10px;*/ width:330px;}
+		.payment_page .aside_content .content_section.pay {position:sticky; top:10px; background:#fff;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.payment_page .body_inner {padding-bottom:30px;}
+		.payment_page .body_inner::after {content:''; display:block; clear:both;}
+		.payment_page .content_section {border-radius:8px; border:1px solid #e2e2e2; margin:0 15px;}
+		.payment_page .main_content {}
+		.payment_page .main_content .aside_content {display:block; margin-top:15px;}
+		.payment_page .main_content .content_section .content_inner {padding:18px;}
+		.payment_page .main_content .content_section ~ .banner_type01,
+		.payment_page .main_content .content_section ~ .content_section {margin-top:15px;}
+		.payment_page .aside_content {display:none;}
+		.payment_page .aside_content .content_section {}
+	}
+
+
+	/* 호텔개요 */
+	.payment_page .main_content .content_section.summary {overflow:hidden;}
+	.payment_page .main_content .content_section.summary .viewer_type01 {height:373px; border-radius:0;}
+	.payment_page .main_content .content_section.summary .viewer_type01 .swiper-container .swiper-slide a {width:560px; height:373px;}
+	.payment_page .main_content .content_section.summary .content_inner {padding:30px;}
+	.payment_page .main_content .content_section.summary .content_inner .prdTitle {font-size:22px; font-weight:800; color:#000; word-break:break-all; margin-bottom:16px;}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 {}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 li {line-height:1.6; font-size:14px; position:relative; color:#242424; padding-left:28px;}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 li::before {content:''; position:absolute; left:0; top:0; width:20px; height:20px; background:0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 li.date::before {background-image:url('../images/ico_calendar01.png');}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 li.user::before {background-image:url('../images/ico_user01.png');}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox01 li + li {margin-top:6px;}
+	.payment_page .main_content .content_section.summary .content_inner .infoBox02 {border-top:1px solid #e2e2e2; padding-top:24px; margin-top:24px;}
+	/* Mobile */
+	@media (max-width:980px){
+		.payment_page .main_content .content_section.summary {margin:0; border:0; border-radius:0; padding:22px;}
+		.payment_page .main_content .content_section.summary .viewer_type01 {border-radius:8px;}
+		.payment_page .main_content .content_section.summary .viewer_type01 .swiper-container .swiper-slide a {padding-top:63.037%;}
+		.payment_page .main_content .content_section.summary .content_inner {padding:20px 0 0;}
+		.payment_page .main_content .content_section.summary .content_inner .prdTitle {font-size:20px;}
+	}
+
+
+	/* 상품안내사항확인 */
+	.payment_page .main_content .content_section.noticeInfo {}
+	.payment_page .main_content .content_section.noticeInfo .content01 .table_type01.room_type{margin-bottom: 10px;}
+
+
+	/* 호텔정보 */
+	.payment_page .main_content .content_section.hotelInfo {padding-bottom:55px;}
+	.payment_page .main_content .content_section.hotelInfo .content_inner {/*padding:16px 24px;*/ box-sizing:border-box; height:160px; overflow:hidden;}
+	.payment_page .main_content .content_section.hotelInfo .content_inner::after {content:''; position:absolute; left:0; right:0; bottom:0; height:119px; background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 94.12%);}
+	.payment_page .main_content .content_section.hotelInfo .content_inner .table_type01 ~ .noticeList_type01 {margin-top:14px;}
+	.payment_page .main_content .content_section.hotelInfo .btn_more {position:absolute; left:0; right:0; bottom:0;}
+	.payment_page .main_content .content_section.hotelInfo.open {}
+	.payment_page .main_content .content_section.hotelInfo.open .content_inner {height:auto;}
+	.payment_page .main_content .content_section.hotelInfo.open .content_inner::after {content:normal;}
+	.payment_page .main_content .content_section.hotelInfo.open .btn_more span::after {background-position-y:-10px;}
+	.payment_page .main_content .content_section.hotelInfo .noticeList_type01 li:has(.table_type01.room_type){padding-left: 0;margin-bottom: 14px;}
+	.payment_page .main_content .content_section.hotelInfo .noticeList_type01 li:has(.table_type01.room_type)::before{display: none;}
+	
+	/* Mobile */
+	@media (max-width:980px){
+		.payment_page .main_content .content_section.hotelInfo {}
+	}
+
+
+	/* 예약자정보 */
+	.payment_page .main_content .content_section.rsvInfo {}
+	.payment_page .main_content .content_section.rsvInfo .noticeTxt_type03 {margin-bottom:20px;}
+	.payment_page .main_content .content_section.rsvInfo .check_wrap {margin-bottom:14px;}
+	.payment_page .main_content .content_section.rsvInfo .check_wrap .chkBox02 .c_name {color:#858585; font-weight:700;}
+	.payment_page .main_content .content_section.rsvInfo .check_wrap .chkBox02 input:checked + .c_name {color:#242424;}
+	.payment_page .main_content .content_section.rsvInfo .subContent_inner {padding-top:20px;}
+	.payment_page .main_content .content_section.rsvInfo .subContent_inner .subTitle {font-size:16px; font-weight:800; color:#858585; margin-bottom:10px;}
+	.payment_page .main_content .content_section.rsvInfo .subContent_inner + .subContent_inner {margin-top:20px; border-top:1px solid #e2e2e2;}
+
+	/* 약관정책 */
+	.payment_page .main_content .content_section.law .content_inner {padding-top:0;}
+
+	/* 요금상세및결제정보 */
+	.payment_page .aside_content .content_section.pay .content_inner {}
+	.payment_page .aside_content .content_section.pay .content_inner .discount_wrap {}
+	.payment_page .aside_content .content_section.pay .content_inner .detail_wrap {margin-top:16px;}
+	.payment_page .aside_content .content_section.pay .content_inner .point_wrap {background:#f5f5f5; padding:14px; margin-top:20px;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap {margin-top:14px; border:1px solid rgba(53,120,220,0.7); border-radius:6px; box-sizing:border-box; overflow:hidden;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner {padding:15px 65px 12px 15px; position:relative;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner .tit {padding-left:55px; position:relative; color:#3578dc; font-weight:700; font-size:14px;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner .tit::before {content:''; position:absolute; left:0; top:50%; width:50px; height:11px; margin-top:-6px; background:url('../images/logo_npay01_06.png') 0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner .txt {font-size:12px; color:#424242; margin-top:4px;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner .btnMore {position:absolute; right:12px; top:50%; width:48px; box-sizing:border-box; height:18px; margin-top:-9px; line-height:16px; background:#3578dc; border:1px solid rgba(0,0,0,0.03); border-radius:999px; padding-left:6px; color:#fff; font-size:10px; font-weight:500;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .inner .btnMore::after {content:''; position:absolute; right:6px; top:50%; width:5px; height:8px; margin-top:-4px; background:url('../images/ico_arrow_r08.png') 0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .payBox {border-top:1px solid #d5e1f5; height:34px; display:flex; justify-content:space-between; align-items:center; background:#f6faff; padding:0 15px;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .payBox .txt {color:#7e8ea5; font-size:13px;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .payBox .btnGo {display:inline-block; font-weight:700; font-size:12px; color:#3578dc; padding-right:12px; position:relative;}
+	.payment_page .aside_content .content_section.pay .content_inner .membership_wrap .payBox .btnGo::after {content:''; position:absolute; right:0; top:50%; width:6px; height:9px; margin-top:-5px; background:url('../images/ico_arrow_r09.png') 0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox {margin-bottom:15px; position:relative;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox .title {font-size:16px; font-weight:800; color:#000;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox .title .point {padding-right:58px; position:relative;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox .title .point::after {content:''; position:absolute; right:0; top:50%; width:52px; height:15.5px; margin-top:-7.5px; background:url('../images/logo_npay_new_02.svg') 0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox .btnInfo {position:absolute; right:0; top:0; color:#858585; font-size:14px; padding-right:19px;}
+	.payment_page .aside_content .content_section.pay .content_inner .hdBox .btnInfo::after {content:''; position:absolute; right:0; top:50%; width:16px; height:16px; margin-top:-8px; background:url('../images/ico_info01.png') 0 0 no-repeat; background-size:100% 100%;}
+	.payment_page .aside_content .content_section.pay .content_inner .totalBox {color:#ea3627; font-size:18px; padding-top:12px; border-top:1px solid #e2e2e2; font-weight:800; display:flex; justify-content:space-between; margin-top:12px;}
+	.payment_page .aside_content .content_section.pay .content_inner .totalBox .tit {}
+	.payment_page .aside_content .content_section.pay .content_inner .totalBox .ct {}
+	.payment_page .aside_content .content_section.pay .content_inner .detailBox {background:#f5f5f5; padding:14px; margin-top:10px;}
+	.payment_page .aside_content .content_section.pay .content_inner .detailBox .title {text-align:center; color:#ea3627; padding-bottom:10px; border-bottom:1px dashed #e2e2e2; margin-bottom:10px; font-weight:800; font-size:16px;}
+	.payment_page .aside_content .content_section.pay .content_inner .descTxt {line-height:1.4; color:#858585; font-size:12px; margin-top:10px;}
+	/* Mobile */
+	@media (max-width:980px){
+	}
+
+
+	/* 240305 Mobile일 때 Swiper 네비게이션 제거 */
+	@media (max-width:980px){
+		.payment_page .banner_type01 .swiper-container .swiper-button{display: none;}
+	}
+
+	/* 240318 Payment Page Input Focus Color */
+	.paymentPage .txtEntry01 input:focus,
+	.paymentPage .txtArea01 textarea:focus,
+	.paymentPage .selectBox01 .valTxt:has(+ :focus) {border: 1px solid var(--green);}
+	.paymentPage .txtEntry01.error input:focus{border-color: var(--red);}
+
+
+
+
+/******************************
+***
+***	02 예약 및 결제			> 결제프로세스
+***
+******************************/
+
+
+	/* 결제진행중 */
+	.loading_container {height:100%;}
+	.loading_container ._asisCSS {height:100%;}
+
+
+
+	/* 결제프로세스 */
+	.complete_container {height:100%; max-width:900px; background:#fff; margin:0 auto;}
+	.complete_container ._asisCSS {height:100%;}
+
+
+
+	/* 오류 */
+	body.warningPage {background:#f5f7fa;}
+	.warning_container {height:100%; display:flex; justify-content:center; align-items:center; text-align:center;}
+	.warning_container .content_wrap {padding-top:210px; background:url('../images/bg_info02.png') center 0 no-repeat;}
+	.warning_container .content_wrap.bg01 {padding-top:210px; background-image:url('../images/bg_info03.png');}
+	.warning_container .content_wrap .txt01 {font-size:18px; line-height:1.6; color:#454545; font-weight:600;}
+	.warning_container .content_wrap .btnBox {margin-top:40px;}
+	.warning_container .content_wrap .btnBox .btn_type02 {width:230px; display:inline-flex;}
+	/* Mobile */
+	@media (max-width:980px){
+		body.warningPage {}
+		.warning_container {}
+		.warning_container .content_wrap {padding-top:170px; background-image:url('../images/bg_info02_m.png'); background-size:190px auto;}
+		.warning_container .content_wrap.bg01 {padding-top:140px; background-image:url('../images/bg_info03_m.png'); background-size:180px auto;}
+		.warning_container .content_wrap .txt01 {font-size:13px; line-height:1.5;}
+		.warning_container .content_wrap .btnBox {margin-top:20px;}
+		.warning_container .content_wrap .btnBox .btn_type02 {width:210px;}
+	}
+
+
+
+
+
+
+
+/******************************
+***
+***	03 마이페이지			> 01 예약확인
+***
+******************************/
+
+
+	.rsvList_page .body_inner {background:#fff;}
+
+	.rsvDetail_page {}
+	.rsvDetail_page .body_inner {padding-bottom:60px;}
+	/* PC */
+	@media (min-width:981px){
+		.rsvDetail_page .main_content {background:#fff; padding:75px 30px 50px 368px; position:relative;}
+		.rsvDetail_page .main_content .summary_section {position:absolute; left:30px; top:75px; width:302px;}
+		.rsvDetail_page .main_content .summary_section .write_type01 {margin-top:20px;}
+		.rsvDetail_page .main_content .content_section {}
+		.rsvDetail_page .main_content .content_section ~ .content_section {border-top:1px solid #e2e2e2;}
+		.rsvDetail_page .btnAlign_type01 {margin-top:4px;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.rsvDetail_page .body_inner {padding-bottom:30px;}
+		.rsvDetail_page .main_content {}
+		.rsvDetail_page .main_content .summary_section {background:#fff;}
+		.rsvDetail_page .main_content .summary_section .write_type01 {}
+		.rsvDetail_page .main_content .content_section {border:1px solid #e2e2e2; background:#fff; border-radius:8px; box-sizing:border-box; margin:15px 15px 0;}
+		.rsvDetail_page .btnAlign_type01 {margin:10px 15px 0;}
+	}
+
+	.rsvDetail_page .main_content .summary_section {}
+	.rsvDetail_page .main_content .summary_section .header_type03 {position:absolute; left:0; bottom:100%; margin-bottom:25px;}
+	.rsvDetail_page .main_content .summary_section .content_inner {}
+	.rsvDetail_page .main_content .summary_section .thumbBox {/*background:#f2f2f2;*/ border-radius:10px; overflow:hidden;}
+	.rsvDetail_page .main_content .summary_section .thumbBox .in {height:130px; border-radius:10px; overflow:hidden; position:relative;}
+	.rsvDetail_page .main_content .summary_section .thumbBox img {width:auto; height:100%; position:absolute; left:50%; top:0; transform:translateX(-50%);}
+	.rsvDetail_page .main_content .summary_section .message_wrap {margin-top:20px;}
+	.rsvDetail_page .main_content .summary_section .message_wrap .btnBox {}
+	.rsvDetail_page .main_content .summary_section .message_wrap .inner {margin-top:20px;}
+	.rsvDetail_page .main_content .summary_section .message_wrap .inner .title {margin-bottom:6px; color:#000; font-weight:700; font-size:13px;}
+	.rsvDetail_page .main_content .summary_section .message_wrap .inner .cont {}
+	.rsvDetail_page .main_content .summary_section .message_wrap .inner .cont li {line-height:1.45; color:#858585; font-size:13px;}
+	/* Mobile */
+	@media (max-width:980px){
+		.rsvDetail_page .main_content .summary_section {min-height:260px; box-sizing:border-box; padding:68px 24px 24px; position:relative;}
+		.rsvDetail_page .main_content .summary_section .header_type03 {left:24px; top:24px; bottom:auto; margin:0;}
+		.rsvDetail_page .main_content .summary_section .content_inner {position:relative; padding-right:117px; min-height:168px;}
+		.rsvDetail_page .main_content .summary_section .thumbBox {position:absolute; right:0; top:0;}
+		.rsvDetail_page .main_content .summary_section .thumbBox .in {width:107px; height:168px;}
+		.rsvDetail_page .main_content .summary_section .thumbBox img {}
+		.rsvDetail_page .main_content .summary_section .message_wrap {margin-top:25px;}
+	}
+
+	.rsvDetail_page .main_content .content_section.payment {padding-bottom:18px;}
+	.rsvDetail_page .main_content .content_section.payment .content_inner ~ .content_inner {border-top:1px solid #e2e2e2; margin-top:18px; padding-top:18px;}
+	.rsvDetail_page .main_content .content_section.payment .payment_header {background:#f5f5f5; display:flex; justify-content:space-between; align-items:center; height:54px; padding:0 15px; border-radius:8px; margin-bottom:16px;}
+	.rsvDetail_page .main_content .content_section.payment .payment_header .title {position:relative; font-size:15px; color:#000; font-weight:700;}
+	.rsvDetail_page .main_content .content_section.payment .payment_header .cont {font-size:16px; font-weight:800; color:#ea3627;}
+	.rsvDetail_page .main_content .content_section.payment .payment_header .title.npay {padding-left:57px;}
+	.rsvDetail_page .main_content .content_section.payment .payment_header .title.npay::before {content:''; position:absolute; left:0; top:50%; margin-top:-9px; width:52px; height:18px; background:url('../images/logo_npay_new_03.svg') 0 0 no-repeat; background-size:100% 100%;}
+	.rsvDetail_page .main_content .content_section.payment .pointBox {background:#f5f5f5; border-radius:8px; padding:10px 16px; display:flex; justify-content:space-between; color:#858585;}
+	.rsvDetail_page .main_content .content_section.payment .feeTable_type02 ~ .pointBox {margin-top:18px;}
+	.rsvDetail_page .main_content .content_section.payment .pointBox .tit {font-size:13px; font-weight:700;}
+	.rsvDetail_page .main_content .content_section.payment .pointBox .tit .sub {font-size:12px; font-weight:400;}
+	.rsvDetail_page .main_content .content_section.payment .pointBox .ct {font-size:13px;}
+	.rsvDetail_page .main_content .content_section.payment .detailBox {background:#f5f5f5; padding:14px; margin-top:10px;}
+	.rsvDetail_page .main_content .content_section.payment .detailBox .title {text-align:center; color:#ea3627; padding-bottom:10px; border-bottom:1px dashed #e2e2e2; margin-bottom:10px; font-weight:800; font-size:16px;}
+	.rsvDetail_page .main_content .content_section.payment .descTxt01 {line-height:1.4; color:#858585; font-size:12px; margin-top:10px;}
+	.rsvDetail_page .main_content .content_section.payment .descTxt02 {line-height:1.4; color:#000; font-size:14px; margin-top:10px; padding-top:10px; border-top:1px solid #e2e2e2;}
+	/* Mobile */
+	@media (max-width:980px){
+		.rsvDetail_page .main_content .content_section.payment {padding:18px;}
+		.rsvDetail_page .main_content .content_section.payment .pointBox .tit .sub {font-size:11px;}
+	}
+
+	.rsvDetail_page .main_content .content_section.info {}
+	.rsvDetail_page .main_content .content_section.info .content_inner {padding:22px 0;}
+	.rsvDetail_page .main_content .content_section.info .content_inner ~ .content_inner {border-top:1px solid #e2e2e2;}
+	/* Mobile */
+	@media (max-width:980px){
+		.rsvDetail_page .main_content .content_section.info .content_inner {padding:24px 18px;}
+	}
+
+
+	
+
+
+
+
+/******************************
+***
+***	03 마이페이지			> 01 예약확인		> 바우처
+***
+******************************/
+
+
+	.voucher_page .body_inner {padding:0 50px;}
+	/* Mobile */
+	@media (max-width:980px){
+		.voucher_page .body_inner {padding:0 15px;}
+	}
+
+
+
+
+
+	
+
+
+
+
+/******************************
+***
+***	03 마이페이지			> 02 1대1문의
+***
+******************************/
+
+	.qnaList_page .body_inner {}
+	.qnaList_page .btnAlign_type03 {background:transparent;}
+
+	.qnaReg_page {}
+	.qnaReg_page .body_inner {}
+
+	.qnaDetail_page {}
+	.qnaDetail_page .body_inner {}
+
+
+
+	
+
+
+
+
+/******************************
+***
+***	03 마이페이지			> 03 FAQ
+***
+******************************/
+
+
+	.faq_page .body_inner {}
+	.faq_page .faq_content {background:#fff; padding:30px 30px 50px;}
+	.faq_page .faq_content .header_wrap {margin-bottom:23px;}
+
+
+
+
+
+
+
+/******************************
+***
+***	04 메인
+***
+******************************/
+
+	/* PC */
+	@media (min-width:981px){
+		.mainPage .mOnly {display:block !important;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.mainPage .pcOnly {display:block !important;}
+	}
+	/* PC */
+	@media (min-width:1101px){
+		.mainPage .mOnly {display:none !important;}
+	}
+	/* Mobile */
+	@media (max-width:1100px){
+		.mainPage .pcOnly {display:none !important;}
+	}
+
+	.mainPage {background: #FFF;}
+	.mainPage .container{width: 100%;height: auto;}
+	.mainPage .header_container{position: relative;height: auto;}
+	.mainPage .header_inner{position: relative;max-width: 1100px;min-height:60px;margin: 0 auto;}
+	.mainPage .body_container{max-width: 1100px;margin: 0 auto;padding: 0 0 150px;}
+	.mainPage .main_page .body_inner{padding-top: 0;}
+	.mainPage .noticeTxt_type01{border-top: 1px solid #E2E2E2;}
+	.mainPage .memberBox.open .member-info{z-index: 1000;}
+	.mainPage .header_container .logo a{display: block;position: absolute;top: 0;left: 0;width: 100%;height: 100%;text-indent: -10000px;}
+	.mainPage .footer_container .footer_inner{max-width: 1100px;margin: 0 auto;}
+	.mainPage .footer_container .btnLogout{max-width: 1100px;margin: 0 auto;}
+
+	.main-tab{margin: 50px 0 40px;}
+	.main-tab ul{display: flex; justify-content: center;}
+	.main-tab li a{display: inline-flex;justify-content: center;align-items: center;gap: 8px;padding: 12px;border: 1px solid #F5F7FA;box-sizing: border-box;background: #F5F7FA;color: #858585;font-size: 13px;font-weight: 600;line-height: normal;letter-spacing: -0.3px;}
+	.main-tab li a::before{content: '';width: 18px;height: 18px;background: no-repeat center / 100% auto;}
+	.main-tab li.--active a{border-color: #000;background: #FFF;color: #242424;}
+	.main-tab li:first-child a{border-radius: 4px 0 0 4px;}
+	.main-tab li:first-child a::before{background-image: url(../images/ico_hotel_in.svg);}
+	.main-tab li.--active:first-child a::before{background-image: url(../images/ico_hotel_in_on.svg);}
+	.main-tab li:last-child a{border-radius: 0 4px 4px 0;}
+	.main-tab li:last-child a::before{background-image: url(../images/ico_hotel_out.svg);}
+	.main-tab li.--active:last-child a::before{background-image: url(../images/ico_hotel_out_on.svg);}
+
+	/* PC */
+	@media (min-width:1101px){
+		.main_page .body_inner {width:1100px;}
+		.main-tab li a{min-width: 210px;}
+	}
+	/* Mobile */
+	@media (max-width:1100px){
+		.mainPage .body_container{padding-bottom: 100px;}
+		.main-tab{margin: 0 0 20px 0;}
+		.main-tab li {position: relative;border-top: 3px solid #F5F5F5;flex: 1;}
+		.main-tab li.--active:last-child::before,
+		.main-tab li.--active:first-child::before{content: '';display: inline-block;width: 20px;height: 100%;position: absolute;right: -20px;width: 0;height: 0;border-bottom: 19px solid #fff;border-top: 20px solid #f5f7fa;border-left: 15px solid #fff;border-right: 15px solid #f5f7fa;box-sizing: border-box;z-index: 10;}
+		.main-tab li.--active:last-child::before{left: -20px;transform:scale(-1,1)}
+		.main-tab li a{width: 100%;padding: 10px;border: none;border-bottom: 1px solid #E2E2E2;}
+		.main-tab li.--active a{border-bottom: 1px solid transparent;}
+	}
+
+	.main_page {}
+	.main_page .tab_type04 {}
+	.main_page .topBanner_section {}
+	.main_page .topBanner_section .banner01 {position:relative;}
+	.main_page .topBanner_section .banner01 img {width:100%;}
+	.main_page .topBanner_section .banner01 picture {width:100%;}
+	.main_page .topBanner_section .banner01 .pcOnly {position:relative;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-container {border-radius:8px; overflow:hidden;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-button {position:absolute; width:24px; height:42px; margin-top:-21px; text-indent:-999px; color:transparent;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-button::after {content:''; position:absolute; left:50%; top:50%; width:8px; height:14px; background:url('../images/btn_control08.png') 0 0 no-repeat; transform:translate(-50%, -50%);}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-button-prev {left:-33px;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-button-next {right:-33px;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-button-next::after {background-position-x:-8px;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-pagination {font-size:0; left:auto; width:auto; right:25px; bottom:25px;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-pagination-bullet {width:7px; height:7px; margin:0 0 0 6px; background:#fff; opacity:0.4;}
+	.main_page .topBanner_section .banner01 .pcOnly .swiper-pagination-bullet-active {opacity:1;}
+	.main_page .topBanner_section .banner02 {position:relative; margin-top:30px;}
+	.main_page .topBanner_section .banner02 img {width:100%;}
+	.main_page .topBanner_section .banner02 .pcOnly {position:relative;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-container {border-radius:8px; overflow:hidden;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-button {position:absolute; width:20px; height:20px; margin-top:-10px; text-indent:-999px; color:transparent;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-button::after {content:''; position:absolute; left:50%; top:50%; width:8px; height:14px; background:url('../images/btn_control08.png') 0 0 no-repeat; margin:-7px 0 0-4px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-button-prev {left:-33px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-button-next {right:-33px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-button-next::after {background-position-x:-8px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination {font-size:0; left:auto; width:auto; right:25px; bottom:25px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination-bullet {width:7px; height:7px; margin:0 0 0 6px; background:#fff; opacity:0.4;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination-bullet-active {opacity:1;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination {font-size:0; left:auto; width:auto; right:25px; bottom:25px;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination-bullet {width:7px; height:7px; margin:0 0 0 6px; background:#fff; opacity:0.4;}
+	.main_page .topBanner_section .banner02 .pcOnly .swiper-pagination-bullet-active {opacity:1;}
+	.main_page .topBanner_section .mOnly {position:relative;}
+	.main_page .topBanner_section .mOnly .swiper-container {border-radius:6px; overflow:hidden;}
+	.main_page .topBanner_section .mOnly .swiper-button {display:none;}
+	.main_page .topBanner_section .mOnly .swiper-pagination {font-size:0; bottom:14px;}
+	.main_page .topBanner_section .mOnly .swiper-pagination-bullet {width:5px; height:5px; margin:0 2px; background:#fff; opacity:0.4;}
+	.main_page .topBanner_section .mOnly .swiper-pagination-bullet-active {opacity:1;}
+	.main_page .mainContent_section {margin-top:60px;}
+	.main_page .mainContent_section .section_inner {}
+	.main_page .mainContent_section .section_inner ~ .section_inner {margin-top:50px;}
+	.main_page .mainContent_section .header_type07 {}
+	.main_page .mainContent_section .tab_type05 {margin-bottom:20px;}
+	.main_page .mainContent_section .itemList_type05 {}
+	.main_page .mainContent_section .itemList_type05 .i_item .thumb img {position:absolute;top: 50%;left:50%;transform: translate(-50%, -50%);width: 100%;height: auto;min-height: 100%;}
+	.main_page .mainContent_section .itemList_type03 {}
+
+	/* Mobile */
+	@media (max-width:1100px){
+		.main_page .body_inner {padding-top:26px;}
+		.main_page .tab_type04 {}
+		/* .main_page .topBanner_section {padding:0 20px;} */
+		.main_page .topBanner_section .mOnly .swiper-pagination{width: auto;left: 25px;}
+		.main_page .topBanner_section .banner01 {padding: 0 20px;}
+		.main_page .topBanner_section .banner01 img {}
+		.main_page .topBanner_section .banner02 {margin-top:30px;}
+		.main_page .topBanner_section .banner02 .swiper-container{border-radius: 0;}
+		.main_page .topBanner_section .banner02 img {}
+		.main_page .mainContent_section {margin-top:50px;}
+		.main_page .mainContent_section .section_inner {}
+		.main_page .mainContent_section .section_inner ~ .section_inner {margin-top:40px;}
+		.main_page .mainContent_section .header_type07 {}
+		.main_page .mainContent_section .tab_type05 {margin-bottom:15px;}
+		.main_page .mainContent_section .itemList_type05 {}
+		.main_page .mainContent_section .itemList_type03 {}
+		.main_page .mainContent_section .itemList_type03 .p_item {width:150px;}
+		.main_page .mainContent_section .itemList_type03 .p_item .thumb {height:150px;}
+	}
+
+
+
+
+/******************************
+***
+***	99 팝업
+***
+******************************/
+
+	.p_notice_page .notice_wrap {background:#f7fafd; border-radius:10px; border:1px solid #eff2f5; padding:15px; line-height:1.4; font-size:14px;}
+
+	.p_chkInOut_page {}
+	.p_chkInOut_page .pop_inner {overflow:hidden;}
+	.p_chkInOut_page .pop_body {padding:0;}
+	.p_chkInOut_page .chkInOut_wrap {display:flex; background:#242424; color:#fff; padding:40px 0 35px;}
+	.p_chkInOut_page .chkInOut_wrap .inner {flex:1; text-align:center;}
+	.p_chkInOut_page .chkInOut_wrap .tit {display:block; font-size:13px; margin-bottom:12px;}
+	.p_chkInOut_page .chkInOut_wrap .cont {display:block; font-size:20px; font-weight:800; position:relative;}
+	.p_chkInOut_page .chkInOut_wrap .inner + .inner .cont::before {content:''; position:absolute; left:0; top:50%; width:40px; height:1px; margin-left:-20px; background:#fff; margin-top:-1px;}
+	.p_chkInOut_page .notice_wrap {padding:26px 28px; text-align:center;}
+	.p_chkInOut_page .notice_wrap .txt01 {font-size:14px; color:#242424; line-height:1.6;}
+	.p_chkInOut_page .notice_wrap .txt02 {font-size:15px; font-weight:600; color:#242424;word-break: keep-all;}
+	.p_chkInOut_page .notice_wrap .txt03 {background:rgba(74,104,189,0.1); color:#00c4d5; padding:10px 14px; border-radius:6px; font-size:12px; line-height:1.4;}
+	.p_chkInOut_page .notice_wrap .txt01 + .txt02 {margin-top:6px;}
+	.p_chkInOut_page .notice_wrap .txt01 + .txt03 {margin-top:16px;}
+
+	.p_grade_page {}
+	.p_grade_page .header_wrap {padding-bottom:10px; border-bottom:1px solid #e2e2e2e2; position:relative; margin-bottom:8px;}
+	.p_grade_page .header_wrap .title {font-size:15px; color:#000; font-weight:600;}
+	.p_grade_page .header_wrap .price {position:absolute; right:0; top:0; color:#000; font-size:15px;}
+	.p_grade_page .header_wrap .price .n {font-weight:600;}
+
+	.p_cdnChange_page {}
+	.p_cdnChange_page .pop_inner {width:340px;}
+	.p_cdnChange_page .pop_body {padding-left:30px; padding-right:30px;}
+	.p_cdnChange_page .noticeTxt {font-size:14px; color:#242424; line-height:1.45; text-align:center;}
+	.p_cdnChange_page .notice_wrap {margin-top:14px;}
+	.p_cdnChange_page .notice_wrap .item {}
+	.p_cdnChange_page .notice_wrap .item + .item {margin-top:15px;}
+	.p_cdnChange_page .notice_wrap .item .header_in {background:#00c4d5; height:20px; line-height:20px; text-align:center; font-size:12px; font-weight:700; color:#fff;}
+	.p_cdnChange_page .notice_wrap .item .content_in {display:flex; min-height:40px; box-sizing:border-box; padding:10px 0; justify-content:center; align-items:center; text-align:center; background:#f1f1f1;}
+	.p_cdnChange_page .notice_wrap .item .content_in .ct {font-size:14px; color:#242424; line-height:1.45; position:relative;}
+	.p_cdnChange_page .notice_wrap .item .content_in .ct + .ct {padding-left:36px;}
+	.p_cdnChange_page .notice_wrap .item .content_in .ct + .ct::before {content:''; position:absolute; left:10px; top:50%; width:16px; height:8px; margin-top:-4px; background:url('../images/ico_arrow_r04.png') 0 0 no-repeat; background-size:100% 100%;}
+	.p_cdnChange_page .notice_wrap .item .content_in .ct.sm {font-size:11px;}
+	.p_cdnChange_page .notice_wrap .item .content_in .ct.pt {color:#ea3627;}
+
+	.p_map_page {}
+	.p_map_page .pop_body {padding:0;}
+	.p_map_page .location_wrap {padding:12px 20px;}
+	.p_map_page .location_wrap .ct {line-height:1.69; color:#858585; font-size:13px; padding-left:20px; position:relative;}
+	.p_map_page .location_wrap .ct::before {content:''; position:absolute; left:0; top:0; width:12px; height:15px; background:url('../images/ico_map01.png') 0 0 no-repeat; background-size:100% 100%;}
+	.p_map_page .map_wrap {background:#d9d9d9;}
+	/* PC */
+	@media (min-width:981px){
+		.p_map_page .pop_inner {width:650px;}
+		.p_map_page .map_wrap {height:342px;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.p_map_page {}
+		.p_map_page .pop_inner {}
+		.p_map_page .pop_body {display:flex; flex-direction:column;}
+		.p_map_page .location_wrap {}
+		.p_map_page .map_wrap {flex:auto;}
+	}
+
+
+	.p_srhMap_page {}
+	.p_srhMap_page .pop_body {padding:0;}
+	.p_srhMap_page .search_wrap {position:relative; border-bottom:1px solid #e2e2e2; padding-left:44px;}
+	.p_srhMap_page .search_wrap::before {content:''; position:absolute; left:18px; top:50%; width:14px; height:14px; margin-top:-7px; background:url('../images/ico_search02.png') 0 0 no-repeat; background-size:100% 100%;}
+	.p_srhMap_page .search_wrap input {display:block; width:100%; border:0; background:transparent; padding:0; font-size:15px; height:54px; color:#242424;}
+	.p_srhMap_page .cityList_section {padding:20px;}
+	.p_srhMap_page .cityList_section .section_inner {}
+	.p_srhMap_page .cityList_section .section_inner ~ .section_inner {margin-top:40px;}
+	.p_srhMap_page .cityList_section .title {font-size:17px; font-weight:600; color:#242424; margin-bottom:20px;}
+	.p_srhMap_page .cityList_section .content_wrap {}
+	.p_srhMap_page .cityList_section .content_wrap ul {display:flex; flex-wrap:wrap; justify-content:space-between; margin:0 -3px;}
+	.p_srhMap_page .cityList_section .content_wrap ul::after {content:''; display:block; flex:auto;}
+	.p_srhMap_page .cityList_section .content_wrap li {width:33.33%; padding:0 3px; box-sizing:border-box;}
+	.p_srhMap_page .cityList_section .content_wrap li:nth-child(n+4) {margin-top:6px;}
+	.p_srhMap_page .cityList_section .content_wrap li .in {display:flex; justify-content:center; align-items:center; text-align:center; font-size:14px; color:#242424; border:1px solid var(--graye2); border-radius:10px; height:40px; box-sizing:border-box; padding:5px;}
+
+	/* 
+		Main Page Popup : 여행지변경 
+	*/
+	.mainPage .p_srhMap_page .major-city{display: inline-flex;align-items: center;gap: 10px;width: 100%;padding: 25px 20px 10px;box-sizing: border-box;font-size: 15px;font-weight: 700;color: var(--mint);}
+	.mainPage .p_srhMap_page .major-city::before{content: '';width: 12px;height: 15px;background: url(../images/ico_map01.png)no-repeat 0 0 / contain;}
+	.mainPage .p_srhMap_page .cityList_section .title {font-size:15px; font-weight:700; color:#242424; margin-bottom:20px;}
+	
+	/* PC */
+	@media (min-width:981px){
+		.p_srhMap_page .pop_inner {width:394px;}
+		.p_srhMap_page .pop_body {max-height:446px;}
+	}
+	/* Mobile */
+	@media (max-width:1100px){
+	}
+
+	/* PC */
+	@media (min-width:1101px){
+		.mainPage .p_srhMap_page .pop_inner {width:394px;}
+		.mainPage .p_srhMap_page .pop_body {max-height:446px;}
+	}
+
+
+	/* 
+		Main Page Popup : 숙박일정 
+	*/
+	/* PC */
+	@media (min-width:1101px){
+		.mainPage .calendar_container {background:#fff; border:1px solid #e2e2e2; border-radius:10px; box-shadow:0 2px 14px rgba(133,133,133,0.14); position:absolute; left:0; top:100%; z-index:9000; display:none;}
+		.mainPage .calendar_container .cal_inner {flex:1; box-sizing:border-box; width:385px;}
+		.mainPage .fullLayer_container.isFixed.p_calendar_page .pop_inner{margin-left: -260px;}
+		.mainPage .fullLayer_container.isFixed.p_calendar_page .pop_body{max-height: 524px !important;}
+		.mainPage .calendar_container{display: flex;position: static;}
+	}
+	/* Mobile */
+	@media (max-width:1100px){
+		.mainPage .fullLayer_container {padding:0;}
+		.mainPage .fullLayer_container .pop_inner {position:absolute; left:20px; right:20px; top:20px; bottom:20px; width:auto; border-radius:0; padding-top:60px;}
+		.mainPage .fullLayer_container .pop_header {padding:0; height:60px; box-sizing:border-box;}
+		.mainPage .fullLayer_container .pop_header .title {font-size:17px;}
+		.mainPage .fullLayer_container .pop_close {right:10px; top:17px;}
+
+		.mainPage .calendar_container{display: block;position: static;border: none;box-shadow: none;}
+		.mainPage .calendar_container .cal_inner {width: auto}
+		.mainPage .fullLayer_container .pop_inner {position:absolute; left:20px; right:20px; top:20px; bottom:20px; width:auto; border-radius:10px; padding-top:60px;}
+	}
+
+	/* 
+		Main Page Popup : 숙박인원 
+	*/
+	.mainPage .userCount_container .uCnt_btn {text-align: center;margin-top: 24px;}
+	.mainPage .userCount_container .uCnt_btn > button{width: 140px;}
+	.mainPage .userCount_container {display:block;position: static;border: none;box-shadow: none;}
+	/* PC */
+	@media (min-width:1101px){
+		.mainPage .fullLayer_container.p_userCount_page .pop_inner {width:354px; left:auto; right:50%; margin:0 -513px 0 0;}
+		.mainPage .userCount_container .uCnt_age .inner {gap: 8px;}
+		.mainPage .userCount_container .uCnt_age .inner .inBox{flex: 1;max-width: 74px;padding: 0;}
+		.mainPage .userCount_container .uCnt_age .valTxt{padding: 0 23px 0 15px;}
+		.mainPage .userCount_container .uCnt_age .valTxt::after{right: 12px;}
+	}
+	/* Mobile */
+	@media (max-width:1100px){
+	}
+
+/******************************
+***
+***	99 기타
+***
+******************************/
+
+	.salefesta_container {display:none; position:fixed; left:0; right:0; top:0; bottom:0; justify-content:center; align-items:center; z-index:9000; background:rgba(0,0,0,0.8);}
+	.salefesta_container .salefesta_inner {text-align:center; color:#fff;}
+	.salefesta_container .coupon_wrap {position:relative;}
+	.salefesta_container .coupon_wrap ~ .coupon_wrap {margin-top:72px;}
+	.salefesta_container .coupon_wrap .couponBox {color:transparent; text-indent:-999px;margin:0 auto;}
+	.salefesta_container .coupon_wrap .couponBox.cp01 {width: 356px;height: 189px;background: url(../images/img_coupon5.svg) no-repeat center / contain}
+	.salefesta_container .coupon_wrap .couponBox.cp02 {width: 464px;height: 158px;background: url(../images/img_coupon3.svg) no-repeat center / contain}
+	.salefesta_container .coupon_wrap .couponBox.cp03 {width: 464px;height: 158px;background: url(../images/img_coupon2.svg) no-repeat center / contain}
+	.salefesta_container .coupon_wrap .txtBox {text-align: center;font-size: 14px;font-weight: 600;line-height: 19px;letter-spacing: -1px;color:#fff; margin-top:18px;}
+	.salefesta_container .coupon_wrap .btnBox {margin-top:28px;}
+	.salefesta_container .coupon_wrap .btnBox .btn {display:inline-flex; padding:0 37px 0 22px; height:35px; justify-content:center; align-items:center; position:relative; background:#FF7D64; border-radius:8px;font-size: 15px;font-weight: 600;}
+	.salefesta_container .coupon_wrap .btnBox .btn::after {content:''; position:absolute; right:22px; top:50%; width:12px; height:13px; margin-top:-7px; background:url('../images/ico_download01.png') 0 0 no-repeat; background-size:100% 100%;}
+	.salefesta_container .coupon_wrap .btnClose {position:absolute; right:5px; top:-50px; width:16px; height:16px; color:transparent; text-indent:-999px; background:url('../images/ico_cancel04.png') 0 0 no-repeat; background-size:100% 100%;}
+	.salefesta_container.visible {display:flex;}
+
+		/* Mobile */
+		@media (max-width:980px){
+			.salefesta_container .coupon_wrap{max-width: 360px;word-break: keep-all;font-size: 12px;}
+			.salefesta_container .coupon_wrap .couponBox{}
+			.salefesta_container .coupon_wrap .couponBox.cp01 {width: 241px;height: 132px;}
+			.salefesta_container .coupon_wrap .couponBox.cp02 {width: 316px;height: 108px;}
+			.salefesta_container .coupon_wrap .couponBox.cp03 {width: 316px;height: 108px;}
+		}
+	
+
+	.event_type230523 {}
+	.event_type230523 .section_inner {border:2px solid #00c4d5; border-radius:10px; padding:14px; background:#fff;}
+	.event_type230523 .notiTxt {color:#242424; font-size:12px; margin-bottom:12px;}
+	.event_type230523 .notiTxt .pt01 {color:#00a8b7;}
+	.event_type230523 .notiTxt .pt02 {text-decoration:underline;}
+	.event_type230523 .law_wrap {}
+	.event_type230523 .law_wrap .a_item {border:1px solid #d3d3d3; padding:15px; position:relative; background:#f5f5f5;}
+	.event_type230523 .law_wrap .a_item ~ .a_item {margin-top:20px;}
+	.event_type230523 .law_wrap .content_in {position:relative;}
+	.event_type230523 .law_wrap .content_in .chkBox04 .c_name {color:#00a8b7; font-size:12px;}
+	.event_type230523 .law_wrap .content_in .chkBox04 .c_name .pt {color:#FF7D64;}
+	.event_type230523 .law_wrap .content_in .btnMore {position:absolute; right:0; top:50%; color:#8c8c8c; line-height:20px; margin-top:-10px; padding-right:12px; font-size:12px;}
+	.event_type230523 .law_wrap .content_in .btnMore::after {content:''; position:absolute; right:0; top:50%; width:9px; height:6px; margin-top:-3px; background:url('../images/ico_arrow_b04.png') 0 0 no-repeat; background-size:100% 100%;}
+	.event_type230523 .law_wrap .detail_in {display:none; margin-top:7px;}
+	.event_type230523 .law_wrap .detail_in .table {background:#fff;}
+	.event_type230523 .law_wrap .detail_in .table th,
+	.event_type230523 .law_wrap .detail_in .table td {border:1px solid #d3d3d3; height:25px; padding:5px 6px; font-size:11px; color:#000;}
+	.event_type230523 .law_wrap .detail_in .table th {background:#e8e8e8; text-align:center;}
+	.event_type230523 .law_wrap .detail_in .table td {text-align:left;}
+	.event_type230523 .law_wrap .detail_in .txt {font-size:11px; color:#000;}
+	.event_type230523 .law_wrap .detail_in .table ~ .txt {margin-top:7px;}
+	.event_type230523 .law_wrap .a_item.open {}
+	.event_type230523 .law_wrap .a_item.open .content_in .btnMore::after {transform:rotate(180deg);}
+	.event_type230523 .law_wrap .a_item.open .detail_in {display:block;}
+	.event_type230523 .agree_wrap {text-align:center; margin-top:16px;}
+	.event_type230523 .agree_wrap .chkBox04 .c_name {font-size:12px;}
+	.event_type230523 .agree_wrap .chkBox04 ~ .chkBox04 {margin-left:17px;}
+	.event_type230523 .area_wrap {background:#f5f5f5; margin-top:16px; padding:14px; text-align:center;}
+	.event_type230523 .area_wrap .header_in {display:inline-block; vertical-align:middle; color:#000; font-size:13px;}
+	.event_type230523 .area_wrap .header_in .pt {color:#f61d36;}
+	.event_type230523 .area_wrap .content_in {display:inline-block; vertical-align:middle; margin-right:5px;}
+	.event_type230523 .area_wrap .content_in .selectBox01 {width:160px;}
+	.event_type230523 .area_wrap .content_in .selectBox01 .valTxt {background:#fff;}
+	.event_type230523 .area_wrap .txt01 {margin-top:9px; color:#f61d36; font-size:13px;}
+	.event_type230523 .area_wrap .txt02 {margin-top:4px; color:#717171; font-size:13px;}
+	.event_type230523 .btn_wrap {text-align:center; margin-top:25px;}
+	.event_type230523 .btn_wrap .btn {display:inline-flex; justify-content:center; align-items:center; font-size:16px; font-weight:600; color:#fff; background:#FF7D64; border-radius:10px; height:50px; padding: 0 24px; position:relative;}
+	/* .event_type230523 .btn_wrap .btn::after {content:''; position:absolute; right:24px; top:50%; width:8px; height:11px; margin-top:-6px; background:url('../images/ico_arrow_r05_m.png') 0 0 no-repeat; background-size:100% 100%;} */
+	/* Mobile */
+	@media (max-width:980px){
+		.event_type230523 {}
+		.event_type230523 .section_inner {border-radius:6px; padding:17px 7px;}
+		.event_type230523 .notiTxt {margin:0 9px 5px;}
+		.event_type230523 .notiTxt .pt01 {color:#00a8b7;}
+		.event_type230523 .notiTxt .pt02 {text-decoration:underline;}
+		.event_type230523 .law_wrap {}
+		.event_type230523 .law_wrap .a_item {padding:14px 9px;}
+		.event_type230523 .law_wrap .a_item ~ .a_item {}
+		.event_type230523 .law_wrap .content_in {}
+		.event_type230523 .law_wrap .content_in .chkBox04 .c_name {}
+		.event_type230523 .law_wrap .content_in .chkBox04 .c_name .pt {}
+		.event_type230523 .law_wrap .content_in .btnMore {}
+		.event_type230523 .law_wrap .content_in .btnMore::after {}
+		.event_type230523 .law_wrap .detail_in {}
+		.event_type230523 .law_wrap .detail_in .table {}
+		.event_type230523 .law_wrap .detail_in .table th,
+		.event_type230523 .law_wrap .detail_in .table td {}
+		.event_type230523 .law_wrap .detail_in .table th {}
+		.event_type230523 .law_wrap .detail_in .table td {}
+		.event_type230523 .law_wrap .detail_in .txt {}
+		.event_type230523 .law_wrap .a_item.open {}
+		.event_type230523 .law_wrap .a_item.open .detail_in {}
+		.event_type230523 .area_wrap {}
+		.event_type230523 .area_wrap .header_in {display:block; margin:0 0 8px;}
+		.event_type230523 .area_wrap .header_in .pt {}
+		.event_type230523 .area_wrap .content_in {display:block;}
+		.event_type230523 .area_wrap .content_in .selectBox01 {display:block; width:175px; margin:0 auto;}
+		.event_type230523 .area_wrap .content_in .selectBox01 .valTxt {}
+		.event_type230523 .area_wrap .content_in .selectBox01 ~ .selectBox01 {margin-top:8px;}
+		.event_type230523 .area_wrap .txt01 {font-size:12px;}
+		.event_type230523 .area_wrap .txt02 {margin-top:10px; font-size:12px;}
+		.event_type230523 .agree_wrap .chkBox04 .c_name {}
+		.event_type230523 .agree_wrap .chkBox04 ~ .chkBox04 {}
+		.event_type230523 .area_wrap {}
+		.event_type230523 .btn_wrap {margin-top:22px; padding:0 7px;}
+		.event_type230523 .btn_wrap .btn {display:flex; padding:0 15px; box-sizing: border-box; margin:0 auto; width:280px; font-size:14px;}
+		/* .event_type230523 .btn_wrap .btn::after {right:20px;} */
+	}
+
+	.event230523_page {background:#fff;}
+	.event230523_page .body_inner {padding-bottom:100px;}
+	.event230523_page .mainBanner_wrap {height:356px; color:transparent; text-indent:-999px; background:#92d0ff url('../images/event/230523/img_banner01.jpg') center center no-repeat; margin-bottom:22px;}
+	/* PC */
+	@media (min-width:981px){
+		.event230523_page .mainBanner_wrap {}
+		.event230523_page .salefesta_section {width:605px; margin:0 auto;}
+	}
+	/* Mobile */
+	@media (max-width:980px){
+		.event230523_page .mainBanner_wrap {height:260px; background-image:url('../images/event/230523/img_banner01_m.jpg'); background-size:auto 100%;}
+		.event230523_page .salefesta_section {margin:0 26px;}
+	}
