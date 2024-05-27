@@ -453,87 +453,86 @@ _SECRETMALL_.fn = {
 
 
 _SECRETMALL_.pages = {
-    chargeList: {
-        init: function () {
-            this.filter();
-        },
-        filter: function () {
-            // 모바일용 필터 토글기능
-            var sFilter = ".chargeList_page .detail_content .filter_inner .filter_wrap";
-            $(document).on("click", sFilter + " .header_in .title", function () {
-                var $this = $(this);
-                var $thisParent = $this.parent();
-                var idx = $thisParent.find(".title").index($this);
-                var isOpen = $this.hasClass("on");
+	chargeList: {
+		init: function(){
+			this.filter();
+		},
+		filter: function(){
 
-                $thisParent.find(".title").removeClass("on");
-                $(sFilter + " .inner").removeClass("on");
-                if (!isOpen) {
-                    $this.addClass("on");
-                    $(sFilter + " .inner")
-                        .eq(idx)
-                        .addClass("on");
-                }
-            });
+			// 모바일용 필터 토글기능
+			var sFilter = '.chargeList_page .detail_content .filter_inner .filter_wrap';
+			$(document).on('click', sFilter + ' .header_in .title', function(){
+				var $this = $(this);
+				var $thisParent = $this.parent();
+				var idx = $thisParent.find('.title').index($this);
+				var isOpen = $this.hasClass('on');
 
-            // 모바일용 필터 sticky 기능
-            var sFilterInner = ".chargeList_page .detail_content .filter_inner";
-            $(window).on("scroll", function () {
-                var nScrl = $("html").scrollTop();
-                var filterPosY =
-                    $(".chargeList_page .detail_content").offset().top -
-                    $(".chargeList_page .mainTab_content").height();
+				$thisParent.find('.title').removeClass('on');
+				$(sFilter + ' .inner').removeClass('on');
+				if( !isOpen ){
+					$this.addClass('on');
+					$(sFilter + ' .inner').eq(idx).addClass('on');
+				}
 
-                if (nScrl > filterPosY) {
-                    $(sFilterInner).addClass("fixed");
-                } else {
-                    $(sFilterInner).removeClass("fixed");
-                }
-            });
-        },
-        // 요금리스트 탭메뉴 스크롤이벤트
-        tabScrollEvt: function () {
-            const mainTab = ".mainTab_content";
-            const mainTabHeight = $(mainTab).height() + 10;
-            let filterHeight = $(".chargeList_page .search_type01").height();
 
-            setSliderCss();
+			});
 
-            $(window).on("scroll resize", function () {
-                updateTabClasses($(window).scrollTop());
-                setSliderCss();
-            });
+			// 모바일용 필터 sticky 기능
+			var sFilterInner = '.chargeList_page .detail_content .filter_inner';
+			$(window).on('scroll', function(){
+				var nScrl = $('html').scrollTop();
+				var filterPosY = $('.chargeList_page .detail_content').offset().top - $('.chargeList_page .mainTab_content').height();
 
-            function updateTabClasses(scrollTop) {
-                const tabSections = [
-                    { id: "#mainContent", tab: 1 },
-                    { id: "#divRateContainer", tab: 2 },
-                    { id: "#hotelInfoSection", tab: 3 },
+				if( nScrl > filterPosY ){
+					$(sFilterInner).addClass('fixed');
+				} else {
+					$(sFilterInner).removeClass('fixed');
+				}
+			});
+		},
+		// 요금리스트 탭메뉴 스크롤이벤트
+		tabScrollEvt: function() {
+			const mainTab = '.mainTab_content';
+			const mainTabHeight = $(mainTab).height() + 10;
+			let filterHeight = $(".chargeList_page .search_type01").height();
+
+			setSliderCss();
+
+			$(window).on('scroll resize', function(){
+				updateTabClasses($(window).scrollTop());
+				setSliderCss();
+			});
+
+			function updateTabClasses(scrollTop) {
+				const tabSections = [
+                    { id: '#mainContent', tab: 1 },
+                    { id: '#divRateContainer', tab: 2 },
+                    { id: '#hotelInfoSection', tab: 3 },
                 ];
 
-                for (const section of tabSections) {
-                    let sectionOffset = $(section.id).offset().top - mainTabHeight - 1;
+				for (const section of tabSections) {
+					let sectionOffset = $(section.id).offset().top - mainTabHeight - 1;
 
-                    if ($(window).width() <= 980) {
-                        filterHeight = $(".chargeList_page .search_type01").height();
-                        sectionOffset -= filterHeight;
-                    }
+					if ($(window).width() <= 980) {
+						filterHeight = $(".chargeList_page .search_type01").height();
+						sectionOffset -= filterHeight;
+					}
+					
+					if (scrollTop >= sectionOffset) {
+						$(mainTab + ' li').removeClass('on');
+						$(mainTab + ' li:nth-child(' + section.tab + ')').addClass('on');
+					}
+				}
+			}
 
-                    if (scrollTop >= sectionOffset) {
-                        $(mainTab + " li").removeClass("on");
-                        $(mainTab + " li:nth-child(" + section.tab + ")").addClass("on");
-                    }
-                }
-            }
-
-            $(mainTab + " li a").on("click", function (e) {
+			$(mainTab + ' li a').on('click', function (e) {
                 e.preventDefault();
 
                 const tabId = $(this).attr("href");
                 let itemOffset = $(tabId).offset().top - mainTabHeight + 1;
 
                 if ($(window).width() <= 980) {
-                    filterHeight = $(".chargeList_page .search_type01").height();
+					filterHeight = $(".chargeList_page .search_type01").height();
                     itemOffset -= filterHeight;
                 }
 
@@ -543,128 +542,88 @@ _SECRETMALL_.pages = {
                 $("html,body").animate({ scrollTop: itemOffset }, 600);
             });
 
-            function setSliderCss() {
-                let el = $(mainTab + " li.on a");
-                let width = el.css("width");
-                let left = el.offset().left - $(mainTab).offset().left;
+			function setSliderCss() {
+				let el = $(mainTab + ' li.on a');
+				let width = el.css('width');
+				let left = el.offset().left - $(mainTab).offset().left;
 
-                $(".tab-slider").css({ width: width, left: left });
-            }
-        },
-        // 240527 요금리스트 라인배너 스크롤이벤트
+				$('.tab-slider').css({ width: width, left: left });
+			}
+		},
+		// 240527 요금리스트 라인배너 스크롤이벤트
+		lineBannerScrollEvt:function(){
+			
+			const lineBanner = $(".line-banner-container");
+			const mainTabContent = $(".mainTab_content");
 
-        // lineBannerScrollEvt: function () {
-        //     const lineBanner = $(".line-banner-container");
-        //     const mainTabContent = $(".mainTab_content");
+			if(lineBanner.hasClass('--active')){
 
-        //     if (lineBanner.hasClass("--active")) {
-        //         $(window).on("load scroll resize", function () {
-        //             lineBannerPosition();
-        //         });
+				$(window).on("load scroll resize", function () {
+					lineBannerPosition();
+				});
 
-        //         function lineBannerPosition() {
-        //             let windowScrollTop = $(window).scrollTop();
-        //             let mainTabHeight = mainTabContent.outerHeight();
-        //             let mainTabOffset = mainTabContent.offset().top;
+				function lineBannerPosition (){
 
-        //             if (windowScrollTop >= mainTabOffset) {
-        //                 if ($(window).width() <= 980) {
-        //                     const searchHeight = $(".filter_inner .search_type01").height();
-
-        //                     $(lineBanner)
-        //                         .stop()
-        //                         .css("top", mainTabHeight + searchHeight - 10);
-        //                 } else {
-        //                     $(lineBanner)
-        //                         .stop()
-        //                         .css("top", mainTabHeight + 10);
-        //                 }
-        //             }
-        //             if (windowScrollTop < mainTabOffset) {
-        //                 $(lineBanner).stop().css("top", "110px");
-        //             }
-        //         }
-        //     }
-        // },
-
-        lineBannerScrollEvt: function () {
-            const lineBanner = $(".line-banner-container");
-            const mainTabContent = $(".mainTab_content");
-
-            if (lineBanner.hasClass("--active")) {
-
-		$(window).on("load resize", function () {
-                    let mainTabOffset = mainTabContent.offset().top;
-		});
-
-                $(window).on("load scroll resize", function () {
-                    lineBannerPosition();
-                });
-
-                function lineBannerPosition() {
-                    let windowScrollTop = $(window).scrollTop();
+					let windowScrollTop = $(window).scrollTop();
                     let mainTabHeight = mainTabContent.outerHeight();
+					let mainTabOffset = mainTabContent.offset().top;
+					
+					if ( windowScrollTop >= mainTabOffset) {
 
-                    if (windowScrollTop >= mainTabOffset) {
-                        if ($(window).width() <= 980) {
-                            const searchHeight = $(".filter_inner .search_type01").height();
+						if ($(window).width() <= 980) {
 
-                            $(lineBanner)
-                                .stop()
-                                .css("inset", '105px');
-                        } else {
-                            $(lineBanner)
-                                .stop()
-                                .css("inset", '105px');
-                        }
-                    }
-                    if (windowScrollTop < mainTabOffset) {
-                        $(lineBanner).stop().css("inset", "revert-layer");
-                    }
-                }
-            }
-        },
-    },
-    payment: {
-        init: function () {
-            this.hotelInfoMore();
-            // this.asideLoc();
-        },
-        hotelInfoMore: function () {
-            $(document).on(
-                "click",
-                ".payment_page .main_content .content_section.hotelInfo .btn_more",
-                function () {
-                    var $this = $(this);
-                    var isOpen = $this.closest(".content_section").hasClass("open");
+							const searchHeight = $(".filter_inner .search_type01").height();
 
-                    if (isOpen) {
-                        $this.closest(".content_section").removeClass("open");
-                        $this.find("span").text("전체보기");
-                    } else {
-                        $this.closest(".content_section").addClass("open");
-                        $this.find("span").text("접기");
-                    }
-                    return false;
-                }
-            );
-        },
-        asideLoc: function () {
-            $(window).on("scroll", function () {
-                var nScrl = $("html").scrollTop();
-                var $el = $(".payment_page .aside_content");
+						}
+						else {
+							$(lineBanner).stop().css("top", mainTabHeight + 10);
+						}
 
-                if (nScrl > $(".header_container").height()) {
-                    $el.css({ top: nScrl - 50 });
-                    // $el.stop().animate({'top': nScrl-50}, 500 );
-                } else {
-                    $el.css({ top: 10 });
-                    // $el.stop().animate({'top': 10}, 500 );
-                }
-            });
-        },
-    },
-};
+					}
+					if(windowScrollTop < mainTabOffset) {
+						
+						$(lineBanner).stop().css('top', '110px');
+					}
+				};
+			}
+		}
+	},
+	payment: {
+		init: function(){
+			this.hotelInfoMore();
+			// this.asideLoc();
+		},
+		hotelInfoMore: function(){
+			$(document).on('click', '.payment_page .main_content .content_section.hotelInfo .btn_more', function(){
+				var $this = $(this);
+				var isOpen = $this.closest('.content_section').hasClass('open');
+
+				if( isOpen ){
+					$this.closest('.content_section').removeClass('open');
+					$this.find('span').text('전체보기');
+				} else {
+					$this.closest('.content_section').addClass('open');
+					$this.find('span').text('접기');
+				}
+				return false;
+			});
+		},
+		asideLoc: function(){
+			$(window).on('scroll', function(){
+				var nScrl = $('html').scrollTop();
+				var $el = $('.payment_page .aside_content');
+
+				if( nScrl > $('.header_container').height() ){
+					$el.css({'top': nScrl-50});
+					// $el.stop().animate({'top': nScrl-50}, 500 );
+				} else {
+					$el.css({'top': 10});
+					// $el.stop().animate({'top': 10}, 500 );
+				}
+			});
+		},
+	},
+}
 
 
 
