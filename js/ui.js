@@ -590,6 +590,8 @@ _SECRETMALL_.pages = {
         lineBannerScrollEvt: function () {
             const lineBanner = $(".line-banner-container");
             const mainTabContent = $(".mainTab_content");
+			const searchFilter = $(".filter_inner .search_type01").();
+
 
             if (lineBanner.hasClass("--active")) {
                 $(window).on("load resize", function () {
@@ -597,7 +599,7 @@ _SECRETMALL_.pages = {
                     let BannerPosition;
 
                     if ($(window).width() <= 980) {
-                        let searchHeight = $(".filter_inner .search_type01").height();
+						searchHeight = searchFilter.height();
                         BannerPosition = mainTabHeight + searchHeight - 10;
                     } else {
                         BannerPosition = mainTabHeight;
@@ -610,13 +612,13 @@ _SECRETMALL_.pages = {
                         let mainTabOffset = mainTabContent.offset().top;
 
                         if (windowScrollTop >= mainTabOffset) {
+
                             lineBannerTop = BannerPosition;
-											return false;
 
                         } else {
-                            lineBannerTop = 110;
-											return false;
 
+                            lineBannerTop = 110;
+							
                         }
 
                         lineBanner.css("top", lineBannerTop);
