@@ -590,7 +590,7 @@ _SECRETMALL_.pages = {
         lineBannerScrollEvt: function () {
             const lineBanner = $(".line-banner-container");
             const mainTabContent = $(".mainTab_content");
-			const searchFilter = $(".filter_inner .search_type01").();
+			const searchFilter = $(".filter_inner .search_type01");
 
 
             if (lineBanner.hasClass("--active")) {
