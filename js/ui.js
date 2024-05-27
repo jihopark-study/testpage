@@ -615,7 +615,7 @@ _SECRETMALL_.pages = {
                             lineBannerTop = 110;
                         }
 
-                        lineBanner.stop().css("top", lineBannerTop);
+                        lineBanner.css("top", lineBannerTop);
                     });
                 });
             }
