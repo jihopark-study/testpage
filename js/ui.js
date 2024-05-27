@@ -556,6 +556,8 @@ _SECRETMALL_.pages = {
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
                     	let mainTabHeight = mainTabContent.outerHeight();
+			const searchHeight = $(".filter_inner .search_type01").height();
+			
 			
 
 			if(lineBanner.hasClass('--active')){
@@ -573,7 +575,6 @@ _SECRETMALL_.pages = {
 
 						if ($(window).width() <= 980) {
 
-							const searchHeight = $(".filter_inner .search_type01").height();
 
 							$(lineBanner).css("top", (mainTabHeight + searchHeight - 10));
 						}
