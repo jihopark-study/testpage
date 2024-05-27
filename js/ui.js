@@ -555,10 +555,11 @@ _SECRETMALL_.pages = {
 			
 			const lineBanner = $(".line-banner-container");
 			const mainTabContent = $(".mainTab_content");
-                    	let mainTabHeight = mainTabContent.outerHeight();
-			const searchHeight = $(".filter_inner .search_type01").height();
-			
-			
+			let mainTabHeight = mainTabContent.outerHeight();
+			let searchHeight = $(".filter_inner .search_type01").height();
+			let mainTapMobilePositon = mainTabHeight + searchHeight - 10;
+			let mainTapPCpositon = mainTabHeight - 10;
+
 
 			if(lineBanner.hasClass('--active')){
 
@@ -575,11 +576,10 @@ _SECRETMALL_.pages = {
 
 						if ($(window).width() <= 980) {
 
-
-							$(lineBanner).css("top", (mainTabHeight + searchHeight - 10));
+							$(lineBanner).css("top", mainTapMobilePositon);
 						}
 						else {
-							$(lineBanner).css("top", mainTabHeight + 10);
+							$(lineBanner).css("top", mainTapPCpositon + 10);
 						}
 
 					}
