@@ -551,48 +551,50 @@ _SECRETMALL_.pages = {
 			}
 		},
 		// 240527 요금리스트 라인배너 스크롤이벤트
-		lineBannerScrollEvt: function() {
-			const $lineBanner = $(".line-banner-container");
-			const $mainTabContent = $(".mainTab_content");
-			const $searchType01 = $(".filter_inner .search_type01");
+		lineBannerScrollEvt:function(){
+			
+			const lineBanner = $(".line-banner-container");
+			const mainTabContent = $(".mainTab_content");
+			const searchFilter = $(".filter_inner .search_type01");
 
-			if ($lineBanner.hasClass('--active')) {
-				let $window = $(window);
-				let mainTabHeight, bannerPosition;
+			if(lineBanner.hasClass('--active')){
 
-				function handleResize() {
-				mainTabHeight = $mainTabContent.outerHeight();
-				if ($window.width() <= 980) {
-					let searchHeight = $searchType01.height();
-					bannerPosition = mainTabHeight + searchHeight - 10;
-				} else {
-					bannerPosition = mainTabHeight;
-				}
-				setLineBannerPosition();
-				}
+				$(window).on("load resize", function () {
 
-				function setLineBannerPosition() {
-				let windowScrollTop = $window.scrollTop();
-				let mainTabOffset = $mainTabContent.offset().top;
+                    let mainTabHeight = mainTabContent.outerHeight();
+					let BannerPosition;
 
-				if (windowScrollTop >= mainTabOffset) {
-					$lineBanner.css("top", bannerPosition);
-				} else {
-					$lineBanner.css('top', '110px');
-				}
-				}
+					if ($(window).width() <= 980) {
 
-				$window.on("load resize", handleResize);
-				$window.on("scroll", setLineBannerPosition);
+                        let searchHeight = searchFilter.height();
+						BannerPosition = mainTabHeight + searchHeight - 10;
 
-				// 페이지 로드 해제 시 이벤트 리스너 제거
-				return function() {
-				$window.off("load resize", handleResize);
-				$window.off("scroll", setLineBannerPosition);
-				}
+                    } else {
+
+						BannerPosition = mainTabHeight;
+						
+                    }
+
+					$(window).on("scroll", function () {
+						lineBannerPosition();
+					});
+	
+					function lineBannerPosition (){
+	
+						let windowScrollTop = $(window).scrollTop();
+						let mainTabOffset = mainTabContent.offset().top;
+						
+						if ( windowScrollTop >= mainTabOffset) {
+							lineBanner.css("top", BannerPosition);
+						}
+						if(windowScrollTop < mainTabOffset) {
+							$(lineBanner).stop().css('top', '110px');
+						}
+					};
+				});
+
 			}
 		},
-
 	},
 	payment: {
 		init: function(){
