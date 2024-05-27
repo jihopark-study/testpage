@@ -587,6 +587,50 @@ _SECRETMALL_.pages = {
         //     }
         // },
 
+
+		// Plan A
+        // lineBannerScrollEvt: function () {
+        //     const lineBanner = $(".line-banner-container");
+        //     const mainTabContent = $(".mainTab_content");
+		// 	const searchFilter = $(".filter_inner .search_type01");
+
+
+        //     if (lineBanner.hasClass("--active")) {
+
+        //         $(window).on("load resize", function () {
+        //             let mainTabHeight = mainTabContent.outerHeight();
+        //             let BannerPosition;
+
+        //             if ($(window).width() <= 980) {
+		// 				searchHeight = searchFilter.height();
+        //                 BannerPosition = mainTabHeight + searchHeight - 10;
+        //             } else {
+        //                 BannerPosition = mainTabHeight;
+        //             }
+
+        //             let lineBannerTop = 110;
+
+        //             $(window).on("scroll", function () {
+        //                 let windowScrollTop = $(window).scrollTop();
+        //                 let mainTabOffset = mainTabContent.offset().top;
+
+        //                 if (windowScrollTop >= mainTabOffset) {
+
+        //                     lineBannerTop = BannerPosition;
+
+        //                 } else {
+
+        //                     lineBannerTop = 110;
+							
+        //                 }
+
+        //                 lineBanner.css("top", lineBannerTop);
+        //             });
+        //         });
+
+        //     }
+        // },
+		// Plan B
         lineBannerScrollEvt: function () {
             const lineBanner = $(".line-banner-container");
             const mainTabContent = $(".mainTab_content");
@@ -594,13 +638,17 @@ _SECRETMALL_.pages = {
 
 
             if (lineBanner.hasClass("--active")) {
+
                 $(window).on("load resize", function () {
                     let mainTabHeight = mainTabContent.outerHeight();
                     let BannerPosition;
 
                     if ($(window).width() <= 980) {
-						searchHeight = searchFilter.height();
-                        BannerPosition = mainTabHeight + searchHeight - 10;
+						// searchHeight = searchFilter.height();
+                        // BannerPosition = mainTabHeight + searchHeight - 10;
+
+						BannerPosition = 105;
+
                     } else {
                         BannerPosition = mainTabHeight;
                     }
@@ -624,6 +672,7 @@ _SECRETMALL_.pages = {
                         lineBanner.css("top", lineBannerTop);
                     });
                 });
+
             }
         },
     },
