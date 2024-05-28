@@ -598,15 +598,14 @@ _SECRETMALL_.pages = {
                 $(window).on("load resize", function () {
 
                     let mainTabHeight = mainTabContent.outerHeight();
-					let offsetTarget = $(".chargeList_page .roomViewer_contenet");
-                    let offsetTargetHeight = offsetTarget.outerHeight();
-
-					let itemOffset = offsetTarget.position().top + offsetTargetHeight;
+                    let roomHeight = $('.chargeList_page .roomViewer_contenet').outerHeight();
                     let BannerPosition;
-
+					let mainTabOffset = $('.chargeList_page .roomViewer_contenet').position().top + roomHeight;
+					console.log(mainTabOffset);
+					
                     if ($(window).width() <= 980) {
-
-						let searchHeight = searchFilter.height();
+											
+						searchHeight = searchFilter.height();
                         BannerPosition = mainTabHeight + searchHeight - 10;
                     } else {
                         BannerPosition = mainTabHeight;
@@ -614,13 +613,17 @@ _SECRETMALL_.pages = {
 
                     let lineBannerTop = 110;
 
-                    $(window).on("load scroll", function () {
+                    $(window).on("scroll", function () {
                         let windowScrollTop = $(window).scrollTop();
 
-                        if (windowScrollTop >= itemOffset) {
+                        if (windowScrollTop >= mainTabOffset) {
+
                             lineBannerTop = BannerPosition;
+
                         } else {
+
                             lineBannerTop = 110;
+							
                         }
 
                         lineBanner.css("top", lineBannerTop);
