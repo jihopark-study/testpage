@@ -587,26 +587,26 @@ _SECRETMALL_.pages = {
         //     }
         // },
 		//Plan C
-	    lineBannerScrollEvt: function () {
+	    // 240527 요금리스트 라인배너 스크롤이벤트
+		lineBannerScrollEvt: function () {
             const lineBanner = $(".line-banner-container");
             const mainTabContent = $(".mainTab_content");
-						const searchFilter = $(".filter_inner .search_type01");
-
+			const searchFilter = $(".filter_inner .search_type01");
 
             if (lineBanner.hasClass("--active")) {
 
                 $(window).on("load resize", function () {
 
                     let mainTabHeight = mainTabContent.outerHeight();
-                    let roomHeight = $('.chargeList_page .roomViewer_contenet').outerHeight();
+					let offsetTarget = $(".chargeList_page .roomViewer_contenet");
+                    let offsetTargetHeight = offsetTarget.outerHeight();
+
+					let itemOffset = offsetTarget.position().top + offsetTargetHeight;
                     let BannerPosition;
-										// let mainTabOffset = mainTabContent.position().top;
-										let mainTabOffset = $('.chargeList_page .roomViewer_contenet').position().top + roomHeight;
-										console.log(mainTabOffset);
-										
+
                     if ($(window).width() <= 980) {
-											
-												searchHeight = searchFilter.height();
+
+						let searchHeight = searchFilter.height();
                         BannerPosition = mainTabHeight + searchHeight - 10;
                     } else {
                         BannerPosition = mainTabHeight;
@@ -614,17 +614,13 @@ _SECRETMALL_.pages = {
 
                     let lineBannerTop = 110;
 
-                    $(window).on("scroll", function () {
+                    $(window).on("load scroll", function () {
                         let windowScrollTop = $(window).scrollTop();
 
-                        if (windowScrollTop >= mainTabOffset) {
-
+                        if (windowScrollTop >= itemOffset) {
                             lineBannerTop = BannerPosition;
-
                         } else {
-
                             lineBannerTop = 110;
-							
                         }
 
                         lineBanner.css("top", lineBannerTop);
