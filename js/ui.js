@@ -635,20 +635,112 @@ _SECRETMALL_.pages = {
 
 
 		// Plan A
-        lineBannerScrollEvt: function () {
+   //      lineBannerScrollEvt: function () {
+   //          const lineBanner = $(".line-banner-container");
+   //          const mainTabContent = $(".mainTab_content");
+			// const searchFilter = $(".filter_inner .search_type01");
+
+
+   //          if (lineBanner.hasClass("--active")) {
+
+   //              $(window).on("load resize", function () {
+   //                  let mainTabHeight = mainTabContent.outerHeight();
+   //                  let BannerPosition;
+
+   //                  if ($(window).width() <= 980) {
+			// 			searchHeight = searchFilter.height();
+   //                      BannerPosition = mainTabHeight + searchHeight - 10;
+   //                  } else {
+   //                      BannerPosition = mainTabHeight;
+   //                  }
+
+   //                  let lineBannerTop = 110;
+
+   //                  $(window).on("scroll", function () {
+   //                      let windowScrollTop = $(window).scrollTop();
+   //                      let mainTabOffset = mainTabContent.offset().top;
+
+   //                      if (windowScrollTop >= mainTabOffset) {
+
+   //                          lineBannerTop = BannerPosition;
+
+   //                      } else {
+
+   //                          lineBannerTop = 110;
+							
+   //                      }
+
+   //                      lineBanner.css("top", lineBannerTop);
+   //                  });
+   //              });
+
+   //          }
+   //      },
+		// Plan B
+   //      lineBannerScrollEvt: function () {
+   //          const lineBanner = $(".line-banner-container");
+   //          const mainTabContent = $(".mainTab_content");
+			// const searchFilter = $(".filter_inner .search_type01");
+
+
+   //          if (lineBanner.hasClass("--active")) {
+
+   //              $(window).on("load resize", function () {
+   //                  let mainTabHeight = mainTabContent.outerHeight();
+   //                  let BannerPosition;
+
+   //                  if ($(window).width() <= 980) {
+			// 			// searchHeight = searchFilter.height();
+   //                      // BannerPosition = mainTabHeight + searchHeight - 10;
+
+			// 			BannerPosition = 105;
+
+   //                  } else {
+   //                      BannerPosition = mainTabHeight;
+   //                  }
+
+   //                  let lineBannerTop = 110;
+
+   //                  $(window).on("scroll", function () {
+   //                      let windowScrollTop = $(window).scrollTop();
+   //                      let mainTabOffset = mainTabContent.offset().top;
+
+   //                      if (windowScrollTop >= mainTabOffset) {
+
+   //                          lineBannerTop = BannerPosition;
+
+   //                      } else {
+
+   //                          lineBannerTop = 110;
+							
+   //                      }
+
+   //                      lineBanner.css("top", lineBannerTop);
+   //                  });
+   //              });
+
+   //          }
+   //      },
+	    lineBannerScrollEvt: function () {
             const lineBanner = $(".line-banner-container");
             const mainTabContent = $(".mainTab_content");
-			const searchFilter = $(".filter_inner .search_type01");
+						const searchFilter = $(".filter_inner .search_type01");
 
 
             if (lineBanner.hasClass("--active")) {
 
                 $(window).on("load resize", function () {
-                    let mainTabHeight = mainTabContent.outerHeight();
-                    let BannerPosition;
 
+                    let mainTabHeight = mainTabContent.outerHeight();
+                    let roomHeight = $('.chargeList_page .roomViewer_contenet').outerHeight();
+                    let BannerPosition;
+										// let mainTabOffset = mainTabContent.position().top;
+										let mainTabOffset = $('.chargeList_page .roomViewer_contenet').position().top + roomHeight;
+										console.log(mainTabOffset);
+										
                     if ($(window).width() <= 980) {
-						searchHeight = searchFilter.height();
+											
+												searchHeight = searchFilter.height();
                         BannerPosition = mainTabHeight + searchHeight - 10;
                     } else {
                         BannerPosition = mainTabHeight;
@@ -658,52 +750,6 @@ _SECRETMALL_.pages = {
 
                     $(window).on("scroll", function () {
                         let windowScrollTop = $(window).scrollTop();
-                        let mainTabOffset = mainTabContent.offset().top;
-
-                        if (windowScrollTop >= mainTabOffset) {
-
-                            lineBannerTop = BannerPosition;
-
-                        } else {
-
-                            lineBannerTop = 110;
-							
-                        }
-
-                        lineBanner.css("top", lineBannerTop);
-                    });
-                });
-
-            }
-        },
-		// Plan B
-        lineBannerScrollEvt: function () {
-            const lineBanner = $(".line-banner-container");
-            const mainTabContent = $(".mainTab_content");
-			const searchFilter = $(".filter_inner .search_type01");
-
-
-            if (lineBanner.hasClass("--active")) {
-
-                $(window).on("load resize", function () {
-                    let mainTabHeight = mainTabContent.outerHeight();
-                    let BannerPosition;
-
-                    if ($(window).width() <= 980) {
-						// searchHeight = searchFilter.height();
-                        // BannerPosition = mainTabHeight + searchHeight - 10;
-
-						BannerPosition = 105;
-
-                    } else {
-                        BannerPosition = mainTabHeight;
-                    }
-
-                    let lineBannerTop = 110;
-
-                    $(window).on("scroll", function () {
-                        let windowScrollTop = $(window).scrollTop();
-                        let mainTabOffset = mainTabContent.offset().top;
 
                         if (windowScrollTop >= mainTabOffset) {
 
